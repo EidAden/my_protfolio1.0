@@ -1,0 +1,76 @@
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+$color_secondary: #333;
+$bc_color-white: #ffffff;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: $font-Montserrat, sans-serif;
+}
+
+.main-container {
+  background: $bc_color-white;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+}
+
+.mobile_menu {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  display: none;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.main_conetn_section {
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  color: $color_secondary;
+}
+
+.contact {
+  background: red;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 1010px) {
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 1009px) {
+  .mobile_menu {
+    display: block;
+    position: absolute;
+    width: 90%;
+    top: 10px;
+    left: 10px;
+  }
+}

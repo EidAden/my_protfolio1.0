@@ -1,0 +1,26 @@
+.section__about {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 700px;
+
+  .ellips_5 {
+    position: absolute;
+    top: -60px;
+    z-index: 0;
+    left: 40%;
+    height: 200px;
+    width: 200px;
+  }
+  .ellips_6 {
+    position: absolute;
+    top: 60px;
+    z-index: 0;
+    left: 80%;
+    height: 82px;
+    width: 82px;
+    rotate: -0;
+  }
+}

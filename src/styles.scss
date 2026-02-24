@@ -1,0 +1,89 @@
+@use '@angular/material' as mat;
+
+/* baloo-2-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/bahloo/baloo-2-v23-latin-regular.woff2') format('woff2');
+}
+/* baloo-2-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/bahloo/baloo-2-v23-latin-700.woff2') format('woff2');
+}
+/* baloo-2-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/bahloo/baloo-2-v23-latin-800.woff2') format('woff2');
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Montserrat/montserrat-v31-latin-regular.woff2') format('woff2');
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Montserrat/montserrat-v31-latin-500.woff2') format('woff2');
+}
+/* montserrat-500italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/Montserrat/montserrat-v31-latin-500italic.woff2') format('woff2');
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/Montserrat/montserrat-v31-latin-600.woff2') format('woff2');
+}
+/* montserrat-600italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/fonts/Montserrat/montserrat-v31-latin-600italic.woff2') format('woff2');
+}
+
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat', sans-serif;
+$color_primary: #5988ff;
+$color_secondary: #ffffff;
+$background_color: #000000;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  background-color: $background_color;
+  color: $color_primary;
+
+  max-height: none;
+  overflow-y: auto;
+}
