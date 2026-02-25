@@ -1,26 +1,214 @@
-.section__about {
-  width: 100%;
-  height: auto;
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+
+.about__content {
   position: relative;
-  display: flex;
   overflow: hidden;
-  height: 700px;
+  height: auto;
+}
+
+.ellips_box {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
 
   .ellips_5 {
+    width: 206px;
+    height: 200px;
     position: absolute;
     top: -60px;
-    z-index: 0;
-    left: 40%;
-    height: 200px;
-    width: 200px;
   }
+}
+
+.ellips_cirle {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+
   .ellips_6 {
+    width: 82px; // optional
+    height: auto; // optional
+  }
+
+  .icons_locations {
+    display: flex;
+  }
+}
+
+.info_card {
+  width: 100%;
+  left: 50px;
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  width: 606px;
+  height: auto;
+  margin-left: 100px;
+
+  p {
+    font-family: $font-Montserrat;
+    font-size: 18px;
+    color: $color_primary;
+  }
+
+  .iam {
+    font-family: $font-Bahloo;
+    color: $color_primary;
+    font-size: 43px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.text_card {
+  width: 571px;
+  .about_me,
+  p {
+    font-family: $font-Montserrat;
+    font-size: 23px;
+    color: #000000;
+  }
+}
+
+.secondline {
+  font-size: 121px;
+  font-weight: 700;
+  font-family: $font-Bahloo;
+  line-height: 0.85;
+  margin: 0;
+  color: $color_primary;
+}
+.info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+
+.loc_icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  img {
     position: absolute;
-    top: 60px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease;
+  }
+
+  .icon-hover {
+    opacity: 0;
+  }
+
+  &:hover .icon-hover {
+    opacity: 1;
+  }
+
+  &:hover .icon-default {
+    opacity: 0;
+  }
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-swap {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease;
+  }
+
+  .icon-hover {
+    opacity: 0;
+  }
+
+  &:hover .icon-hover {
+    opacity: 1;
+  }
+
+  &:hover .icon-default {
+    opacity: 0;
+  }
+}
+
+/* .btn {
+  width: 253px;
+  height: 54px;
+  border: solid 2px #5988ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  background: #ffffff;
+  color: $color_primary;
+}
+ */
+
+.btn {
+  width: 253px;
+  height: 54px;
+  border: 2px solid #5988ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: $font-Montserrat;
+
+  background: #fff;
+  color: #5988ff;
+
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+
+  /* blue slide layer */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #3d6eff, #5988ff);
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
     z-index: 0;
-    left: 80%;
-    height: 82px;
-    width: 82px;
-    rotate: -0;
+  }
+
+  /* keep text above layer */
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    transform: translateX(0);
+  }
+
+  &:hover {
+    color: white;
+    transform: scale(1.06); // ⭐ jump forward
   }
 }

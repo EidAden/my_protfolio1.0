@@ -17,13 +17,12 @@ body {
 
 .main-container {
   background: $bc_color-white;
-
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
   height: auto;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .mobile_menu {
@@ -46,17 +45,24 @@ body {
   width: 100%;
   max-width: 1440px;
   color: $color_secondary;
-}
-
-.contact {
-  background: red;
-  height: 100vh;
+  background: #ffffff;
+  position: relative;
 }
 
 .header {
   width: 100%;
   position: absolute;
   top: 0;
+}
+
+.ellips_box {
+  width: 100%;
+  margin: 0 auto;
+
+  .ellips_5 {
+    top: -90px;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1010px) {
