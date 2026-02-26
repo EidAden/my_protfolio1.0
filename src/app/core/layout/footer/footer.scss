@@ -1,0 +1,35 @@
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+$color_secondary: #333;
+$bc_color-white: #ffffff;
+
+.footer {
+  background: $color_primary;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .footertitle {
+    color: $bc_color-white;
+    font-size: 88px;
+    font-family: $font-Bahloo;
+    margin: 0;
+  }
+
+  p {
+    font-family: $font-Montserrat;
+    font-size: 18px;
+    color: $bc_color-white;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    .footertitle {
+      font-size: 36px;
+    }
+  }
+}
