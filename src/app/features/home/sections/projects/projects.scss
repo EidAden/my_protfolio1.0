@@ -1,35 +1,71 @@
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+$color_secondary: #333;
+$bc_color-white: #ffffff;
+
+.background__container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.text_section {
+  height: auto;
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 50px;
+  .overlay_title {
+    font-size: clamp(24px, 5vw, 96px);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: $color_primary;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .text_info {
+    width: 100%;
+    font-size: clamp(16px, 3vw, 32px);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $color_primary;
+    line-height: 1.05;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.overlay_container {
+  position: absolute;
+  background: transparent;
+  width: 1879px;
+  height: 1985px;
+  padding-left: 100px;
+
+  .component-card {
+    width: 65%;
+
+    height: 1500px;
+  }
+}
+
 .ell7 {
   width: 100%px;
   padding-top: 40px;
   display: flex;
   justify-content: center;
-
-  .Ellipse7 {
-    width: 183px;
-    height: 183px;
-  }
-  .Ellipse7 {
-    width: 106px;
-    height: 107px;
-  }
 }
+
 .ell8 {
   width: 90%;
   display: flex;
   justify-content: flex-end;
-
-  .Ellipse8 {
-    width: 183px;
-    height: 183px;
-  }
 }
 .ll4 {
   width: fit-content;
-
-  .Ellipse4 {
-    width: 183px;
-    height: 183px;
-  }
 }
 .ell10 {
   width: 100%;
@@ -37,35 +73,57 @@
   justify-content: start;
   padding-left: 150px;
   padding-top: 100px;
-
-  .Ellipse10 {
-    width: 51px;
-    height: 51px;
-  }
 }
 .ell9 {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
 
-  .Ellipse10 {
-    width: 51px;
-    height: 51px;
-  }
-  .ell11 {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    padding-left: 150px;
-    .Ellipse11 {
-      width: 237px;
-      height: 237px;
+.ell11 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding-left: 150px;
+}
+
+.ell12 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ell7 img,
+.ell8 img {
+  width: clamp(20px, 15vw, 183px);
+}
+
+.ell9 img {
+  width: clamp(120px, 20vw, 652px);
+}
+.ell11 img {
+  width: clamp(120px, 20vw, 237px);
+}
+
+.ell10 img,
+.ell12 img {
+  width: clamp(30px, 6vw, 51px);
+}
+.ell4 img {
+  width: clamp(100px, 20vw, 237px);
+}
+
+@media (max-width: 780px) {
+  .ell7 {
+    margin-top: 20px;
+    width: 90%;
+    justify-content: flex-end;
+    img {
+      width: 30px;
     }
   }
 
-  .ell12 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  .ell8 {
+    display: none;
   }
 }

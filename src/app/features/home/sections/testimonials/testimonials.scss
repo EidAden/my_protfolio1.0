@@ -1,0 +1,27 @@
+$font-Bahloo: 'Baloo 2';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+$color_secondary: #333;
+$bc_color-white: #ffffff;
+
+.main_container {
+  background: $color_primary;
+  color: $bc_color-white;
+  width: 100%;
+
+  h3 {
+    font-size: 48px;
+    font-family: $font-Bahloo;
+    color: $bc_color-white;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  p {
+    color: $bc_color-white;
+    font-size: 32px;
+    font-family: $font-Montserrat;
+    font-weight: 400;
+    text-align: center;
+  }
+}
