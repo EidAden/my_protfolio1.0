@@ -1,21 +1,20 @@
-<div class="project-card">
-  <div class="project-image">
-    <img src="images/projects/join.png" alt="Join Project" />
-  </div>
+<div class="all">
+  <div class="project-card" [id]="id()" [class.reverse]="reverse()">
+    <div class="project-image">
+      <img [src]="image()" [alt]="title() + ' Project'" />
+    </div>
 
-  <div class="project-info">
-    <h3 class="project-title">Join</h3>
+    <div class="project-info">
+      <h3 class="project-title">{{ title() }}</h3>
+      <p class="project-tech">{{ tech() }}</p>
+      <p class="project-description">
+        {{ description() }}
+      </p>
 
-    <p class="project-tech">Angular | TypeScript | HTML | CSS | Firebase</p>
-
-    <p class="project-description">
-      Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-      functions, assign users and categories.
-    </p>
-
-    <div class="project-buttons">
-      <a href="#" class="btn github">Github</a>
-      <a href="#" class="btn live">Live Test</a>
+      <div class="project-buttons">
+        <a [href]="github()" target="_blank" class="btn github">Github</a>
+        <a [href]="live()" target="_blank" class="btn live">Live Test</a>
+      </div>
     </div>
   </div>
 </div>
