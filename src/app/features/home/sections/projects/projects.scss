@@ -3,7 +3,6 @@ $font-Montserrat: 'Montserrat', sans-serif;
 $color_primary: #5988ff;
 $color_secondary: #333;
 $bc_color-white: #ffffff;
-$bg-dark: #000000;
 
 @mixin flex-center {
   display: flex;
@@ -28,7 +27,6 @@ $bg-dark: #000000;
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: transparent;
   padding: 120px 0;
 }
 
@@ -38,7 +36,7 @@ $bg-dark: #000000;
   z-index: 1;
   pointer-events: none;
 
-  div {
+  > div {
     position: absolute;
   }
 
@@ -50,7 +48,7 @@ $bg-dark: #000000;
 
 .projects-content {
   position: relative;
-  z-index: 8;
+  z-index: 2;
   width: min(1440px, 100%);
   margin: 0 auto;
   padding: 0 40px;
@@ -59,65 +57,63 @@ $bg-dark: #000000;
 
 .text_section {
   width: min(720px, 100%);
-
+  /*  margin: 0 auto 80px auto; */
   text-align: center;
+
   @include flex-center;
   flex-direction: column;
   gap: 16px;
+}
 
-  .overlay_title {
-    margin: 0;
-    font-family: $font-Bahloo;
-    font-size: clamp(42px, 7vw, 96px);
-    font-weight: 700;
-    color: $color_primary;
-    line-height: 1;
-  }
+.overlay_title {
+  margin: 0;
+  font-family: $font-Bahloo;
+  font-size: clamp(42px, 7vw, 96px);
+  font-weight: 700;
+  line-height: 1;
+  color: $color_primary;
+}
 
-  .text_info {
-    margin: 0;
-    font-family: $font-Montserrat;
-    font-size: clamp(18px, 2.2vw, 32px);
-    font-weight: 400;
-    color: $color_primary;
-    line-height: 1.2;
-  }
+.text_info {
+  margin: 0;
+  font-family: $font-Montserrat;
+  font-size: clamp(18px, 2.2vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: $color_primary;
 }
 
 .overlay_container {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 100%;
-  z-index: 60;
-}
-
-.component-card {
-  margin-top: 10px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
 }
 
 app-project-card {
   display: block;
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: 100%;
 }
 
+/* ELLIPSES */
+
 .ell7 {
-  @include absolute-shape(0px, auto, auto, 700px);
+  @include absolute-shape(90px, auto, auto, 700px);
 
   img {
-    @include ellipse-size(70px, 2vw, 103px);
+    @include ellipse-size(35px, 2vw, 103px);
   }
 }
 
 .ell8 {
-  @include absolute-shape(0px, 200px, auto, auto);
+  @include absolute-shape(200px, 100px, auto, auto);
 
   img {
-    @include ellipse-size(0px, 10vw, 220px);
+    @include ellipse-size(100px, 10vw, 220px);
   }
 }
 
@@ -125,12 +121,12 @@ app-project-card {
   @include absolute-shape(300px, auto, auto, -80px);
 
   img {
-    @include ellipse-size(180px, 1vw, 237px);
+    @include ellipse-size(150px, 12vw, 237px);
   }
 }
 
 .ell10 {
-  @include absolute-shape(1080px, auto, 50px, 100px);
+  @include absolute-shape(1080px, auto, auto, 100px);
 
   img {
     @include ellipse-size(30px, 4vw, 51px);
@@ -141,7 +137,7 @@ app-project-card {
   @include absolute-shape(810px, -180px, auto, auto);
 
   img {
-    @include ellipse-size(320px, 10vw, 652px);
+    @include ellipse-size(200px, 28vw, 652px);
   }
 }
 
@@ -149,7 +145,7 @@ app-project-card {
   @include absolute-shape(1750px, auto, auto, 40px);
 
   img {
-    @include ellipse-size(160px, 1vw, 237px);
+    @include ellipse-size(160px, 12vw, 237px);
   }
 }
 
@@ -161,6 +157,7 @@ app-project-card {
   }
 }
 
+/* TABLET */
 @media (max-width: 1024px) {
   .projects-section {
     padding: 100px 0;
@@ -171,20 +168,21 @@ app-project-card {
   }
 
   .overlay_container {
-    gap: 100px;
+    gap: 80px;
   }
 
   .ell8 {
-    right: -100px;
     top: 500px;
+    left: -10px;
   }
 
   .ell9 {
-    right: -120px;
     top: 1500px;
+    right: -120px;
   }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .projects-section {
     padding: 80px 0;
@@ -195,7 +193,7 @@ app-project-card {
   }
 
   .text_section {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
 
   .overlay_container {
@@ -207,8 +205,8 @@ app-project-card {
   }
 
   .ell7 {
-    top: 60px;
-    left: 10px;
+    top: 20px;
+    left: 280px;
   }
 
   .ell8 {
@@ -217,22 +215,52 @@ app-project-card {
   }
 
   .ell4 {
-    top: 980px;
-    left: -50px;
+    top: 1750px;
+    right: -50px;
   }
 
   .ell9 {
-    top: 1850px;
+    top: 1030px;
     right: -90px;
   }
 
   .ell11 {
-    top: 2550px;
-    left: 0;
+    display: none;
   }
 
-  .ell10,
+  .ell10 {
+    top: 2863px;
+    left: 300px;
+  }
+
   .ell12 {
     display: none;
+  }
+
+  @media (max-width: 320px) {
+    .ell7 {
+      top: 20px;
+      left: 200px;
+    }
+
+    .ell8 {
+      top: 340px;
+      right: -50px;
+    }
+
+    .ell4 {
+      top: 980px;
+      left: -30px;
+    }
+
+    .ell9 {
+      top: 1650px;
+      right: -70px;
+    }
+
+    .ell11 {
+      top: 2550px;
+      left: -20px;
+    }
   }
 }
