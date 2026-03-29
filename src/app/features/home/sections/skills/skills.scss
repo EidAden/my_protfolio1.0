@@ -49,6 +49,19 @@ $color_secondary: #ffffff;
   line-height: 1.15;
 }
 
+.skill img {
+  transition: transform 0.25s ease;
+}
+
+.skill:hover img {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.skill img:hover + span {
+  font-weight: 600;
+  color: #ffffff;
+}
+
 @media (min-width: 600px) {
   .skills__grid {
     grid-template-columns: repeat(4, 1fr);
