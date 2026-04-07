@@ -15,4 +15,6 @@ import { Footer } from '../../core/layout/footer/footer';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home {
+  isMenuOpen = false;
+}

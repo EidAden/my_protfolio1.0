@@ -1,19 +1,20 @@
-<div class="mobile_menu">
+<div class="mobile_menu2">
   <div class="hamburger_menu">
-    <img src="images/mobile/logo.png" alt=" Logo" />
-    <img src="images/mobile/menu.png" alt=" Logo" />
+    <img src="images/mobile/logo.png" alt="Logo" />
+    <img src="images/mobile/menu.png" alt="Menu" (click)="openMenu()" />
   </div>
 
-  <nav class="nav_mobile" display="none">
+  <nav class="nav_mobile" [class.open]="isMenuOpen">
     <div class="menu_logs">
-      <img src="images/mobile/logo_m.png" alt=" Logo" />
-      <img src="images/mobile/menu.png" alt=" Logo" />
+      <img src="images/mobile/logo_m.png" alt="Logo" />
+      <img src="images/mobile/menu.png" alt="Close Menu" (click)="closeMenu()" />
     </div>
 
     <ul class="nav__list">
-      <li><a href="#about">About me</a></li>
-      <li><a href="#skills">Skill set</a></li>
-      <li><a href="#work">My work</a></li>
+      <li><a href="#about" (click)="closeMenu()">About me</a></li>
+      <li><a href="#skills" (click)="closeMenu()">Skill set</a></li>
+      <li><a href="#work" (click)="closeMenu()">My work</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
 
       <li class="nav__lang">
         <a href="#">DE</a>

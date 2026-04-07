@@ -1,4 +1,4 @@
-<div class="hero__section">
+<div class="hero__section" id="hero">
   <div class="bg-hero">
     <img class="hero_ellipse" src="images/hero/ellipse_3.png" alt="" />
     <img class="hero_photo" src="images/hero/photo.png" alt="profile" />
@@ -14,9 +14,10 @@
     </div>
 
     <div class="hero-bottom">
-      <div class="scroll__down">
+      <div class="scroll__down" *ngIf="!menuOpen">
         <img src="/images/mobile/scroll_down.png" alt="" />
       </div>
+
       <div class="disktop_menu">
         <div class="scroll_line">
           <p>Scroll</p>

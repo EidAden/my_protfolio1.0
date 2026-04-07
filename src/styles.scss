@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* baloo-2-regular - latin */
 @font-face {
   font-display: swap;

@@ -70,10 +70,9 @@ h4,
 
 .hero-bottom {
   position: absolute;
-  right: clamp(20px, 6vw, 77px);
+  right: clamp(300px, 6vw, 300px);
   bottom: 0px;
   z-index: 250;
-
   display: flex;
   align-items: flex-end;
 }
@@ -83,6 +82,12 @@ h4,
   justify-content: space-around;
   align-items: center;
   gap: 24px;
+
+  p {
+    font-size: 32px;
+    font-family: $font-Montserrat;
+    margin: 0;
+  }
 }
 
 .scroll_line {
@@ -90,7 +95,7 @@ h4,
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 220px;
+  height: 120px;
 }
 
 .social-icons {
@@ -168,8 +173,8 @@ h4,
   }
 
   .hero-bottom {
-    right: 16px;
-    bottom: 16px;
+    right: 250px;
+    bottom: 0;
   }
 }
 @media (max-width: 1024px) {
@@ -212,10 +217,9 @@ h4,
     }
   }
 
-  /* Bottom Menu etwas nach innen */
-  .hero-bottom {
-    right: 16px;
-    bottom: 16px;
+  hero-bottom {
+    right: 250px;
+    bottom: 0;
   }
 }
 
@@ -258,6 +262,9 @@ h4,
     height: 612px;
     top: -66px;
     left: -120px;
+  }
+  .hero-bottom {
+    right: clamp(700px, 6vw, 300px);
   }
 
   .hero_photo {
