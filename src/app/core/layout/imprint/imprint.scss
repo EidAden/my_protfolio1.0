@@ -1,0 +1,254 @@
+$primary: #5988ff;
+$primary-light: #8fb0ff;
+$text: #2f2f2f;
+$text-soft: #5f5f5f;
+$bg-top: #ffffff;
+$bg-bottom: #eaf0ff;
+
+.imprint {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 140px 24px 100px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, $bg-top 0%, $bg-bottom 100%);
+  overflow: hidden;
+}
+
+.imprint::before,
+.imprint::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.imprint::before {
+  top: -180px;
+  left: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(89, 136, 255, 0.12) 0%, rgba(89, 136, 255, 0) 70%);
+}
+
+.imprint::after {
+  right: -140px;
+  bottom: -160px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(89, 136, 255, 0.1) 0%, rgba(89, 136, 255, 0) 70%);
+}
+
+.imprint__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 920px;
+  font-family: 'Montserrat', sans-serif;
+  color: $text;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.imprint__title {
+  margin: 0 0 40px;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: $primary;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 4px 18px rgba(89, 136, 255, 0.15);
+}
+
+.imprint__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 88px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $primary 0%, $primary-light 100%);
+}
+
+.imprint__section {
+  margin-bottom: 42px;
+}
+
+.imprint__section h2 {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: $primary;
+  position: relative;
+}
+
+.imprint__section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: calc(100% - 12px);
+  min-height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, $primary 0%, $primary-light 100%);
+  box-shadow: 0 0 14px rgba(89, 136, 255, 0.22);
+}
+
+.imprint__section p {
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 1.8vw, 1.08rem);
+  color: $text-soft;
+}
+
+.imprint__section strong {
+  color: $text;
+  font-weight: 700;
+}
+
+.imprint__section a {
+  color: $primary;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.imprint__section a:hover {
+  color: #3f73f5;
+  opacity: 0.9;
+}
+
+.imprint__footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(89, 136, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.imprint__footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: $text-soft;
+}
+
+/* Animation */
+.imprint__fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: imprintFadeUp 0.8s ease forwards;
+}
+
+.imprint__fade--delay-1 {
+  animation-delay: 0.15s;
+}
+
+.imprint__fade--delay-2 {
+  animation-delay: 0.3s;
+}
+
+.imprint__fade--delay-3 {
+  animation-delay: 0.45s;
+}
+
+@keyframes imprintFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover nur Desktop */
+@media (hover: hover) {
+  .imprint__section h2 {
+    transition: transform 0.2s ease;
+  }
+
+  .imprint__section h2:hover {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 900px) {
+  .imprint {
+    padding: 120px 22px 80px;
+  }
+
+  .imprint__container {
+    max-width: 100%;
+  }
+
+  .imprint__title {
+    margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imprint {
+    min-height: auto;
+    padding: 95px 16px 60px;
+  }
+
+  .imprint::before {
+    width: 280px;
+    height: 280px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .imprint::after {
+    width: 240px;
+    height: 240px;
+    right: -90px;
+    bottom: -90px;
+  }
+
+  .imprint__title {
+    margin-bottom: 28px;
+  }
+
+  .imprint__title::after {
+    width: 72px;
+  }
+
+  .imprint__section {
+    margin-bottom: 34px;
+  }
+
+  .imprint__section h2 {
+    padding-left: 14px;
+    margin-bottom: 12px;
+  }
+
+  .imprint__footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imprint {
+    padding: 82px 14px 50px;
+  }
+
+  .imprint__section p,
+  .imprint__footer p {
+    font-size: 0.95rem;
+  }
+}

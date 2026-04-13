@@ -1,3 +1,11 @@
 <div class="main-layout">
-  <app-home class="layout-content"></app-home>
+  <app-header class="header"></app-header>
+
+  <app-mobile-menu class="mobile-menu"></app-mobile-menu>
+
+  <main class="layout-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
 </div>

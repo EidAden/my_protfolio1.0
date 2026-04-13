@@ -1,19 +1,27 @@
 $dark: #262e34;
 $header_bg_color: #eaf0ff;
+$secondary: #ffffff;
 $font-Montserrat: 'Montserrat';
 $primary: #5988ff;
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 25px 80px;
+  padding: 20px 0px;
   background: transparent;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &.imprint {
+    background: $secondary;
+  }
 }
 
 @media (max-width: 1024px) {
   .nav {
-    padding: 25px 45px;
+    display: none;
   }
 }
 
@@ -30,7 +38,7 @@ $primary: #5988ff;
   gap: 60px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 45px;
 }
 a {
   font-family: $font-Montserrat, sans-serif;
@@ -47,6 +55,11 @@ a {
     transform: translateY(-3px);
     font-weight: 800;
   }
+}
+
+.header.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* language */

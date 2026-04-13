@@ -2,11 +2,10 @@ $font-baloo: 'Baloo 2', cursive;
 $font-montserrat: 'Montserrat', sans-serif;
 
 $color-primary: #5988ff;
-$color-white: #ffffff;
-$color-black: #000000;
+$color-white: #fff;
+$color-black: #000;
 $color-border: #b7b7b7;
-
-$bg-top: #ffffff;
+$bg-top: #fff;
 $bg-bottom: #eaf0ff;
 
 @mixin flex-column($gap: 0) {
@@ -23,7 +22,7 @@ $bg-bottom: #eaf0ff;
 
 @mixin field-style {
   width: 100%;
-  padding: 18px 24px;
+  padding: 18px 50px 18px 24px;
   border: 1.5px solid $color-primary;
   border-radius: 14px;
   outline: none;
@@ -36,10 +35,6 @@ $bg-bottom: #eaf0ff;
   &::placeholder {
     color: #2b2b2b;
     opacity: 1;
-  }
-
-  &:focus {
-    border-color: darken($color-primary, 8%);
   }
 }
 
@@ -54,7 +49,6 @@ $bg-bottom: #eaf0ff;
 .contact-inner {
   position: relative;
   z-index: 2;
-  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 72px;
@@ -91,25 +85,27 @@ $bg-bottom: #eaf0ff;
     font-size: clamp(30px, 3vw, 52px);
     line-height: 1.1;
   }
+}
 
-  .contact-text {
-    max-width: 520px;
-    margin: 0;
-    color: $color-black;
-    font-family: $font-montserrat;
-    font-size: clamp(18px, 1.4vw, 32px);
-    line-height: 1.3;
-  }
+.contact-text,
+.contact-note {
+  margin: 0;
+  font-family: $font-montserrat;
+}
 
-  .contact-note {
-    margin: 0;
-    color: $color-primary;
-    font-family: $font-montserrat;
-    font-size: clamp(18px, 1.5vw, 28px);
+.contact-text {
+  max-width: 520px;
+  color: $color-black;
+  font-size: clamp(18px, 1.4vw, 32px);
+  line-height: 1.3;
+}
 
-    span {
-      font-weight: 700;
-    }
+.contact-note {
+  color: $color-primary;
+  font-size: clamp(18px, 1.5vw, 28px);
+
+  span {
+    font-weight: 700;
   }
 }
 
@@ -135,65 +131,65 @@ $bg-bottom: #eaf0ff;
   }
 
   button {
+    position: relative;
+    overflow: hidden;
     align-self: center;
     min-width: 220px;
     height: 64px;
-    margin-top: 4px;
-    border: 2px solid $color-border;
+    border: 1px solid $color-primary;
     border-radius: 14px;
     background: transparent;
-    color: $color-border;
+    color: $color-primary;
     font-family: $font-montserrat;
     font-size: 38px;
     cursor: pointer;
-    transition: 0.25s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      border-color: $color-primary;
-      background: $color-primary;
-      color: $color-white;
-    }
-  }
-}
-
-.privacy-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: -6px;
-
-  input[type='checkbox'] {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    flex-shrink: 0;
-    cursor: pointer;
-    accent-color: $color-primary;
+    z-index: 1;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      color 0.3s ease,
+      border-color 0.2s ease;
   }
 
-  label {
-    color: $color-black;
-    font-family: $font-montserrat;
-    font-size: 16px;
-    line-height: 1.4;
-
-    a {
-      color: $color-primary;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      #5988ff 50%,
+      #0043f0 80%,
+      #ffffff 5%,
+      #ffffff -5%,
+      #5988ff -55%,
+      #0043f0 60%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
   }
-}
 
-.background-images {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
+  button:disabled {
+    border-color: $color-border;
+    color: $color-border;
+    cursor: not-allowed;
+  }
+
+  button:not(:disabled):hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(89, 136, 255, 0.35);
+    color: $color-white;
+  }
+
+  button:not(:disabled):hover::before {
+    transform: translateX(0);
+  }
+
+  button:not(:disabled):active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(89, 136, 255, 0.25);
+    color: $color-white;
+  }
 }
 
 .form-field {
@@ -202,13 +198,6 @@ $bg-bottom: #eaf0ff;
   flex-direction: column;
 }
 
-/* Platz für Icon rechts im Input */
-.contact-form input,
-.contact-form textarea {
-  padding-right: 50px; // wichtig für Icon Platz
-}
-
-/* ICON POSITION */
 .status-icon {
   position: absolute;
   right: 18px;
@@ -219,21 +208,17 @@ $bg-bottom: #eaf0ff;
   pointer-events: none;
 }
 
-/* Für textarea extra Position */
-textarea + .status-icon {
+.textarea-icon {
   top: 24px;
   transform: none;
 }
 
-/* ERROR TEXT */
 .error-text {
   margin-top: 6px;
-  font-size: 14px;
+  font: 14px $font-montserrat;
   color: #ff2d55;
-  font-family: $font-montserrat;
 }
 
-/* VALIDATION BORDER */
 input.ng-touched.ng-invalid,
 textarea.ng-touched.ng-invalid {
   border: 2px solid #ff2d55;
@@ -244,10 +229,82 @@ textarea.ng-touched.ng-valid {
   border: 2px solid #7ed321;
 }
 
+.privacy-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: -6px;
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: $color-black;
+    font-family: $font-montserrat;
+    font-size: 16px;
+    line-height: 1.4;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid $color-primary;
+      border-radius: 6px;
+      background: transparent;
+      flex-shrink: 0;
+      transition: 0.2s ease;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  input:checked + label::before {
+    background: $color-primary;
+    border-color: $color-primary;
+  }
+
+  input:checked + label::after {
+    content: '✔';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    font-size: 14px;
+    color: $color-white;
+  }
+
+  label:hover::before {
+    transform: scale(1.08);
+  }
+}
+
+.background-images {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .ellipse12,
 .ellipse13,
 .ellipse14 {
   position: absolute;
+
+  img {
+    display: block;
+  }
 }
 
 .ellipse12 {
@@ -258,7 +315,6 @@ textarea.ng-touched.ng-valid {
   .ell_img12 {
     width: 130px;
     height: 130px;
-    display: block;
   }
 }
 
@@ -270,7 +326,6 @@ textarea.ng-touched.ng-valid {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    display: block;
   }
 }
 
@@ -281,7 +336,6 @@ textarea.ng-touched.ng-valid {
   .ell_img14 {
     width: 70px;
     height: 70px;
-    display: block;
   }
 }
 
@@ -300,10 +354,6 @@ textarea.ng-touched.ng-valid {
     width: 100%;
     height: 100%;
     transition: opacity 0.3s ease;
-  }
-
-  .icon-default {
-    opacity: 1;
   }
 
   .icon-hover {
@@ -349,14 +399,14 @@ textarea.ng-touched.ng-valid {
     bottom: 120px;
   }
 
-  .ellipse14 {
+  .ellipse14,
+  .btn_icon {
     right: 40px;
     bottom: 30px;
   }
 
   .btn_icon {
     left: 40px;
-    bottom: 30px;
   }
 }
 
@@ -415,13 +465,8 @@ textarea.ng-touched.ng-valid {
     }
   }
 
-  .ellipse13 {
-    left: 30px;
-    bottom: 90px;
-
-    .ell_img13 {
-      display: none;
-    }
+  .ellipse13 .ell_img13 {
+    display: none;
   }
 
   .ellipse14 {
@@ -458,18 +503,18 @@ textarea.ng-touched.ng-valid {
     h3 {
       font-size: 32px;
     }
+  }
 
-    .contact-text,
-    .contact-note {
-      font-size: 18px;
-      line-height: 1.4;
-    }
+  .contact-text,
+  .contact-note {
+    font-size: 18px;
+    line-height: 1.4;
   }
 
   .contact-form {
     input,
     textarea {
-      padding: 16px 18px;
+      padding: 16px 44px 16px 18px;
       font-size: 18px;
       border-radius: 10px;
     }

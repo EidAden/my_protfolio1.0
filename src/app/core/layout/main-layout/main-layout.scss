@@ -1,26 +1,55 @@
 html,
 body {
-  height: auto; /* ✅ nicht 100% fest */
+  margin: 0;
+  padding: 0;
   min-height: 100%;
 }
 
 body {
-  margin: 0;
   background: #000;
 }
 
 .main-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.layout-content {
   width: 100%;
 }
 
-/* .layout-content {
-  flex: 1 1 auto;
+.mobile-menu.open {
+  transform: translateX(0);
 }
 
-.app-footer {
-  flex: 0 0 auto;
+.mobile-menu {
+  display: none;
 }
- */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu {
+    display: block;
+  }
+}

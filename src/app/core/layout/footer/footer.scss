@@ -1,35 +1,130 @@
 $font-Bahloo: 'Baloo 2';
 $font-Montserrat: 'Montserrat';
 $color_primary: #5988ff;
-$color_secondary: #333;
 $bc_color-white: #ffffff;
 
 .footer {
-  background: $color_primary;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: 0 80px;
 
-  .footertitle {
-    color: $bc_color-white;
-    font-size: 88px;
-    font-family: $font-Bahloo;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(90deg, #6f92f5 0%, #004cff 100%);
+  box-sizing: border-box;
+}
+
+.footer__logo {
+  img {
+    width: 72px;
+    height: auto;
+    display: block;
+  }
+}
+
+.footer__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.footer__copyright {
+  margin: 0;
+  color: $bc_color-white;
+
+  font-family: $font-Bahloo;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.footer__link {
+  position: relative;
+  color: $bc_color-white;
+  font-family: $font-Montserrat;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 6px;
+  transition: transform 0.25s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $bc_color-white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
   }
 
-  p {
-    font-family: $font-Montserrat;
-    font-size: 18px;
-    color: $bc_color-white;
+  &:hover {
+    transform: translateX(4px);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+  }
+
+  a:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+    display: block;
   }
 }
 
 @media (max-width: 900px) {
   .footer {
-    .footertitle {
-      font-size: 36px;
-    }
+    padding: 40px 24px;
+    min-height: auto;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer__center {
+    gap: 18px;
+  }
+
+  .footer__copyright {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .footer__link {
+    font-size: 16px;
+  }
+
+  .footer__socials {
+    gap: 24px;
+  }
+
+  .footer__logo img {
+    width: 60px;
   }
 }
