@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Output, EventEmitter, Input, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -11,6 +11,12 @@ export class MobileMenu {
   @Input() isMenuOpen = false;
 
   @Output() menuChange = new EventEmitter<boolean>();
+
+  router = inject(Router);
+
+  isImprintPage(): boolean {
+    return this.router.url.includes('imprint') || this.router.url.includes('privacy');
+  }
 
   openMenu() {
     this.menuChange.emit(true);

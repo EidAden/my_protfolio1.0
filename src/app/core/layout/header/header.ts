@@ -11,7 +11,6 @@ export class Header {
   router = inject(Router);
 
   isImprintPage(): boolean {
-    /* return this.router.url.includes('imprint'); */
     return this.router.url.includes('imprint') || this.router.url.includes('privacy');
   }
 

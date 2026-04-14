@@ -59,7 +59,7 @@ $bg-bottom: #eaf0ff;
 .privacy h1 {
   margin: 0 0 40px;
   font-family: 'Baloo 2', cursive;
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: $primary;
@@ -173,7 +173,6 @@ $bg-bottom: #eaf0ff;
   }
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
   .privacy {
     min-height: auto;
@@ -224,7 +223,7 @@ $bg-bottom: #eaf0ff;
 /* KLEINE DISPLAYS */
 @media (max-width: 400px) {
   .privacy {
-    padding: 82px 14px 50px;
+    padding: 132px 14px 50px;
   }
 
   .privacy h1 {

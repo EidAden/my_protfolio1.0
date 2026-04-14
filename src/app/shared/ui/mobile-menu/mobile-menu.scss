@@ -38,6 +38,7 @@
 
 .hamburger_menu {
   @include flex-between;
+  padding: 15px 20px;
 
   img:last-child {
     cursor: pointer;
@@ -114,4 +115,50 @@
       text-underline-offset: 6px;
     }
   }
+}
+
+.close_icon {
+  position: relative;
+  width: 32px; // kannst du anpassen
+  height: 32px;
+  cursor: pointer;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+
+  .default {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .hover {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &:hover {
+    .default {
+      opacity: 0;
+    }
+
+    .hover {
+      opacity: 1;
+    }
+  }
+}
+
+.logo-menu {
+  width: 22px;
+  height: auto;
+}
+.logo-menu1 {
+  width: 32px;
+  height: auto;
 }

@@ -11,7 +11,7 @@ import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
   styleUrl: './main-layout.scss',
 })
 export class MainLayout {
-  /* isMenuOpen = false;
+  isMenuOpen = false;
 
   toggleMenu(open: boolean) {
     this.isMenuOpen = open;
@@ -21,5 +21,5 @@ export class MainLayout {
     } else {
       document.body.classList.remove('menu-open');
     }
-  } */
+  }
 }
