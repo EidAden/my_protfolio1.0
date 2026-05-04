@@ -1,15 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Buttons } from '../../../../shared/ui/buttons/buttons';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  imports: [FormsModule, Buttons],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
 export class Contact {
   http = inject(HttpClient);
+  borderlight = '2px solid #BBBBBB solid 2px';
 
   contactForm = {
     name: '',

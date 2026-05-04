@@ -1,43 +1,3 @@
-<!-- <div class="mobile_menu2">
-  <div class="hamburger_menu">
-    <img src="images/mobile/logo-blue.png" alt="Logo" class="logo-menu1" />
-    <img src="images/mobile/menu.png" alt="Menu" (click)="openMenu()" />
-  </div>
-
-  <nav class="nav_mobile" [class.open]="isMenuOpen">
-    <div class="menu_logs">
-      <img src="images/mobile/logo-blue.png" alt="Logo" class="logo-menu" />
-      <div class="close_icon">
-        <img
-          src="images/mobile/close1.png"
-          alt="default-icon"
-          class="icon default"
-          (click)="closeMenu()"
-        />
-        <img
-          src="images/mobile/close0.png"
-          alt="hover-icon"
-          class="icon hover"
-          (click)="closeMenu()"
-        />
-      </div>
-    </div>
-
-    <ul class="nav__list">
-      <li><a href="#about" (click)="closeMenu()">About me</a></li>
-      <li><a href="#skills" (click)="closeMenu()">Skill set</a></li>
-      <li><a href="#work" (click)="closeMenu()">My work</a></li>
-      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
-
-      <li class="nav__lang">
-        <a href="#">DE</a>
-        <span>/</span>
-        <a href="#" class="active">EN</a>
-      </li>
-    </ul>
-  </nav>
-</div> -->
-
 <div class="mobile_menu2">
   <div class="hamburger_menu">
     <img
@@ -51,7 +11,7 @@
   <nav class="nav_mobile" [class.open]="isMenuOpen">
     <div class="menu_logs">
       <img
-        [src]="isImprintPage() ? 'images/mobile/logo-blue.png' : 'images/header/logo.png'"
+        [src]="isImprintPage() ? 'images/mobile/logo-blue.png' : 'images/mobile/logo-blue.png'"
         alt="Logo"
         class="logo-menu"
       />

@@ -1,0 +1,84 @@
+$font-Poppins: 'Poppins', sans-serif;
+$color_primary: #5988ff;
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  font-family: $font-Poppins;
+}
+
+.contact {
+  width: 254px;
+  height: 58px;
+  border-radius: 10px;
+  font-size: 28px;
+  background: transparent;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:not(:disabled):hover {
+    animation: colorChange 0.5s ease forwards;
+
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 67, 240, 0.3);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(
+      104.4deg,
+      #5988ff 9.21%,
+      #5988ff 27.52%,
+      #0043f0 62.24%,
+      #ffffff 64.83%,
+      #ffffff 67.43%,
+      #ffffff 90.18%
+    );
+  }
+  33% {
+    background: linear-gradient(
+      104.85deg,
+      #5988ff 29.03%,
+      #ffffff 33.64%,
+      #ffffff 39.44%,
+      #ffffff 90.08%
+    );
+  }
+  66% {
+    background: linear-gradient(
+      104.4deg,
+      #5988ff 9.21%,
+      #5988ff 27.52%,
+      #0043f0 62.24%,
+      #ffffff 64.83%,
+      #ffffff 67.43%,
+      #ffffff 90.18%
+    );
+  }
+  100% {
+    color: #ffffff;
+    border: none;
+    background: radial-gradient(
+      74.22% 74.22% at 19.79% 22.42%,
+      #5988ff 6.25%,
+      #5988ff 51.56%,
+      #0043f0 100%
+    );
+  }
+}
+
+.contact:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+  box-shadow: none;
+  animation: none;
+}

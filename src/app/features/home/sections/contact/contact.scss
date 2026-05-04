@@ -129,67 +129,6 @@ $bg-bottom: #eaf0ff;
     min-height: 202px;
     resize: vertical;
   }
-
-  button {
-    position: relative;
-    overflow: hidden;
-    align-self: center;
-    min-width: 220px;
-    height: 64px;
-    border: 1px solid $color-primary;
-    border-radius: 14px;
-    background: transparent;
-    color: $color-primary;
-    font-family: $font-montserrat;
-    font-size: 38px;
-    cursor: pointer;
-    z-index: 1;
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease,
-      color 0.3s ease,
-      border-color 0.2s ease;
-  }
-
-  button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      120deg,
-      #5988ff 50%,
-      #0043f0 80%,
-      #ffffff 5%,
-      #ffffff -5%,
-      #5988ff -55%,
-      #0043f0 60%
-    );
-    transform: translateX(-100%);
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
-  }
-
-  button:disabled {
-    border-color: $color-border;
-    color: $color-border;
-    cursor: not-allowed;
-  }
-
-  button:not(:disabled):hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(89, 136, 255, 0.35);
-    color: $color-white;
-  }
-
-  button:not(:disabled):hover::before {
-    transform: translateX(0);
-  }
-
-  button:not(:disabled):active {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(89, 136, 255, 0.25);
-    color: $color-white;
-  }
 }
 
 .form-field {
@@ -447,12 +386,6 @@ textarea.ng-touched.ng-valid {
       min-height: 180px;
       font-size: 22px;
     }
-
-    button {
-      width: 100%;
-      max-width: 260px;
-      font-size: 30px;
-    }
   }
 
   .ellipse12 {
@@ -565,4 +498,8 @@ textarea.ng-touched.ng-valid {
     width: 34px;
     height: 34px;
   }
+}
+
+a {
+  text-decoration: none;
 }

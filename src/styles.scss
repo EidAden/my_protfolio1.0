@@ -70,7 +70,14 @@ html {
   font-weight: 600;
   src: url('/fonts/Montserrat/montserrat-v31-latin-600italic.woff2') format('woff2');
 }
-
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/poppins-v24-latin-regular.woff2') format('woff2');
+}
+$font-Poppins: 'Poppins', sans-serif;
 $font-Bahloo: 'Baloo 2';
 $font-Montserrat: 'Montserrat', sans-serif;
 $color_primary: #5988ff;

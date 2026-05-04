@@ -11,14 +11,22 @@
         {{ description() }}
       </p>
 
-      <div class="project-buttons">
-        <a href="https://github.com/EidAden/Join" target="_blank" class="btn github">Github</a>
+      <div class="project-links">
+        <a href="https://github.com/EidAden/Join" target="_blank" class="btn github">
+          <app-buttons
+            text="Github"
+            font_family="Poppins, sans-serif"
+            font_weight="400"
+          ></app-buttons>
+        </a>
+
         <a
+          class="live-btn"
           href="https://eid-aden.developerakademie.net/Join/login.html?skipAnimation=true"
           target="_blank"
           class="btn live"
         >
-          Live Test
+          <app-buttons text="Live Test" font_family="Poppins, sans-serif"></app-buttons>
         </a>
       </div>
     </div>

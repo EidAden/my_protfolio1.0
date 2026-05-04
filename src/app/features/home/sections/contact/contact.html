@@ -139,9 +139,16 @@
             <p class="error-text">Please accept the privacy policy</p>
           }
 
-          <!-- <button type="submit" disabled>Say hello ;)</butto -->
-
-          <button type="submit" [disabled]="!contactForm.privacy">Say hello ;)</button>
+          <app-buttons
+            text="Say Hello ;)"
+            width_btn="207px"
+            font_size="23px"
+            font_weight="400"
+            font_family="Poppins, sans-serif"
+            [disabled]="!formRef.valid || !contactForm.privacy"
+            [color_text]="formRef.valid ? '#5988FF' : '#BBBBBB'"
+            [border]="formRef.valid ? '2px solid #5988FF' : '2px solid #BBBBBB'"
+          ></app-buttons>
         </form>
       </div>
     </div>
