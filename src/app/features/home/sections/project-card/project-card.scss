@@ -114,7 +114,8 @@ $bc_color-white: #ffffff;
 
   .live {
     display: inline-block;
-    width: 137px;
+    width: 140px;
+    height: 54px;
   }
 }
 
@@ -126,5 +127,7 @@ a {
 
 .project-links {
   display: flex;
+  justify-content: center;
   gap: 16px;
+  flex-direction: row-reverse;
 }
