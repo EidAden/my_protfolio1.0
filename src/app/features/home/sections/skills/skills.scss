@@ -4,8 +4,10 @@ $color_primary: #5988ff;
 $color_secondary: #ffffff;
 
 .skills {
-  background: $color_primary;
+  /*  background: $color_primary; */
   color: $color_secondary;
+
+  background: linear-gradient(128.94deg, #5988ff -33.96%, #5988ff 36.71%, #0043f0 112.25%);
 }
 
 .skills__title {

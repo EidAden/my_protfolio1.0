@@ -1,8 +1,4 @@
 @use './variables' as *;
-@use './mixins' as *;
-@use './form';
-@use './background';
-@use './responsive';
 
 @mixin flex-column($gap: 0) {
   display: flex;
@@ -27,9 +23,4 @@
   color: #2b2b2b;
   font-family: $font-montserrat;
   font-size: 24px;
-
-  &::placeholder {
-    color: #2b2b2b;
-    opacity: 1;
-  }
 }

@@ -5,10 +5,19 @@
 
     <div class="hero-overlay">
       <div class="hero-content">
-        <h4 class="hero-name">Hi, I'm Eid Aden</h4>
+        <!--   <h4 class="hero-name">Hi, I'm Eid Aden</h4>
         <h1 class="hero-title">
           FRONTEND <br />
           DEVELOPER
+        </h1> -->
+
+        <h4 class="hero-name">
+          {{ 'hero.name' | transloco }}
+        </h4>
+
+        <h1 class="hero-title">
+          {{ 'hero.titleFrontend' | transloco }} <br />
+          {{ 'hero.titleDeveloper' | transloco }}
         </h1>
       </div>
     </div>
@@ -20,7 +29,7 @@
 
       <div class="disktop_menu">
         <div class="scroll_line">
-          <p>Scroll</p>
+          <p>{{ 'hero.scroll' | transloco }}</p>
           <img src="images/hero/line.png" alt="line" />
         </div>
 

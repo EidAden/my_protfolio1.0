@@ -1,0 +1,13 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "work": "Meine Arbeit"
+  },
+  "hero": {
+    "name": "Hallo, ich bin Eid Aden",
+    "titleFrontend": "FRONTEND",
+    "titleDeveloper": "ENTWICKLER",
+    "scroll": "Scrollen"
+  }
+}

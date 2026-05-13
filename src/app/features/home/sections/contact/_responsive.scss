@@ -1,0 +1,200 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './form';
+
+@media (max-width: 1200px) {
+  .contact-inner {
+    padding: 0 40px;
+  }
+
+  .contact-container {
+    gap: 56px;
+  }
+
+  .contact-left {
+    width: 44%;
+    padding-top: 80px;
+  }
+
+  .contact-right {
+    width: 56%;
+    padding-top: 76px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .ellipse13 {
+    left: 130px;
+    bottom: 120px;
+  }
+
+  .ellipse14,
+  .btn_icon {
+    right: 40px;
+    bottom: 30px;
+  }
+
+  .btn_icon {
+    left: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 48px 0 88px;
+  }
+
+  .contact-inner {
+    padding: 0 24px;
+  }
+
+  .contact-title {
+    padding: 10px 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .contact-form {
+    gap: 22px;
+    margin-left: 0;
+
+    input {
+      height: 64px;
+      font-size: 22px;
+    }
+
+    textarea {
+      min-height: 180px;
+      font-size: 22px;
+    }
+  }
+
+  .ellipse12 {
+    top: 20px;
+    left: 74%;
+
+    .ell_img12 {
+      width: 92px;
+      height: 92px;
+    }
+  }
+
+  .ellipse13 .ell_img13 {
+    display: none;
+  }
+
+  .ellipse14 {
+    right: 20px;
+    bottom: 24px;
+
+    .ell_img14 {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .btn_icon {
+    left: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 0 74px;
+  }
+
+  .contact-inner {
+    padding: 0 16px;
+  }
+
+  .ell_img12 {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-title {
+    font-size: clamp(52px, 15vw, 72px);
+  }
+
+  .contact-left {
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  .contact-text,
+  .contact-note {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .contact-form {
+    input,
+    textarea {
+      padding: 16px 44px 16px 18px;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+
+    button {
+      min-width: unset;
+      height: 58px;
+      font-size: 24px;
+    }
+  }
+
+  .privacy-row {
+    align-items: flex-start;
+
+    label {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+  }
+
+  .ellipse12 {
+    top: 14px;
+    left: 78%;
+
+    .ell_img12 {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .ellipse13 {
+    display: none;
+  }
+
+  .ellipse14 {
+    right: 12px;
+    bottom: 18px;
+
+    .ell_img14 {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .btn_icon {
+    left: 16px;
+    bottom: 18px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
