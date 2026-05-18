@@ -1,14 +1,12 @@
-<section class="privacy">
+<!-- <section class="privacy">
   <div class="privacy__container">
-    <h1>Datenschutzerklärung</h1>
+    <h1>{{ 'privacy.title' | transloco }}</h1>
 
     <p>
-      Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre
-      personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften
-      sowie dieser Datenschutzerklärung.
+      {{ 'privacy.intro' | transloco }}
     </p>
 
-    <h2>1. Verantwortliche Stelle</h2>
+    <h2>{{ 'privacy.responsibleTitle' | transloco }}</h2>
     <p>
       Eid Aden<br />
       Brandenburger Str. 7<br />
@@ -16,72 +14,134 @@
       E-Mail: eiddev42@gmail.com
     </p>
 
-    <h2>2. Datenerfassung auf dieser Website</h2>
+    <h2>{{ 'privacy.collectionTitle' | transloco }}</h2>
 
-    <h3>Kontaktformular</h3>
+    <h3>{{ 'privacy.contactFormTitle' | transloco }}</h3>
     <p>
-      Wenn Sie mir über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
-      Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage
-      und für den Fall von Anschlussfragen gespeichert.
+      {{ 'privacy.contactFormText1' | transloco }}
     </p>
     <p>
-      Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO oder auf
-      Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+      {{ 'privacy.contactFormText2' | transloco }}
     </p>
 
-    <h3>Anfrage per E-Mail</h3>
+    <h3>{{ 'privacy.emailRequestTitle' | transloco }}</h3>
     <p>
-      Wenn Sie mich per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden
-      personenbezogenen Daten zum Zwecke der Bearbeitung gespeichert.
+      {{ 'privacy.emailRequestText' | transloco }}
     </p>
 
-    <h2>3. Hosting</h2>
-    <p>Diese Website wird bei folgendem Anbieter gehostet:</p>
+    <h2>{{ 'privacy.hostingTitle' | transloco }}</h2>
+    <p>{{ 'privacy.hostingText1' | transloco }}</p>
     <p>
       ALL-INKL.COM – Neue Medien Münnich<br />
       Hauptstraße 68<br />
       02742 Friedersdorf
     </p>
     <p>
-      Die Nutzung erfolgt im Interesse einer sicheren und zuverlässigen Bereitstellung dieser
-      Website gemäß Art. 6 Abs. 1 lit. f DSGVO.
+      {{ 'privacy.hostingText2' | transloco }}
     </p>
 
-    <h2>4. Server-Log-Dateien</h2>
+    <h2>{{ 'privacy.logFilesTitle' | transloco }}</h2>
     <p>
-      Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten
-      Server-Log-Dateien, die Ihr Browser automatisch übermittelt. Dies sind:
+      {{ 'privacy.logFilesText' | transloco }}
     </p>
     <ul>
-      <li>Browsertyp und Browserversion</li>
-      <li>verwendetes Betriebssystem</li>
-      <li>Referrer URL</li>
-      <li>Hostname des zugreifenden Rechners</li>
-      <li>Uhrzeit der Serveranfrage</li>
+      <li>{{ 'privacy.logBrowser' | transloco }}</li>
+      <li>{{ 'privacy.logOS' | transloco }}</li>
+      <li>{{ 'privacy.logReferrer' | transloco }}</li>
+      <li>{{ 'privacy.logHostname' | transloco }}</li>
+      <li>{{ 'privacy.logTime' | transloco }}</li>
     </ul>
 
-    <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+    <p>{{ 'privacy.logFilesEnd' | transloco }}</p>
 
-    <h2>5. Cookies</h2>
-    <p>Diese Website verwendet keine Cookies oder Tracking-Tools.</p>
+    <h2>{{ 'privacy.cookiesTitle' | transloco }}</h2>
+    <p>{{ 'privacy.cookiesText' | transloco }}</p>
 
-    <h2>6. Ihre Rechte</h2>
-    <p>Sie haben jederzeit das Recht auf:</p>
+    <h2>{{ 'privacy.rightsTitle' | transloco }}</h2>
+    <p>{{ 'privacy.rightsText' | transloco }}</p>
     <ul>
-      <li>Auskunft über Ihre gespeicherten Daten</li>
-      <li>Berichtigung oder Löschung Ihrer Daten</li>
-      <li>Einschränkung der Verarbeitung</li>
-      <li>Widerruf Ihrer Einwilligung</li>
-      <li>Beschwerde bei einer Aufsichtsbehörde</li>
+      <li>{{ 'privacy.rightsText' | transloco }}</li>
+      <li>{{ 'privacy.rightsText' | transloco }}</li>
+      <li>{{ 'privacy.rightsText' | transloco }}</li>
+      <li>{{ 'privacy.rightsText' | transloco }}</li>
+      <li>{{ 'privacy.rightsText' | transloco }}</li>
     </ul>
 
-    <h2>7. Speicherdauer</h2>
+    <h2>{{ 'privacy.storageTitle' | transloco }}</h2>
     <p>
-      Ihre personenbezogenen Daten verbleiben bei mir, bis der Zweck der Datenverarbeitung entfällt
-      oder Sie die Löschung verlangen, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+      {{ 'privacy.storageText' | transloco }}
     </p>
 
-    <h2>8. Keine automatisierte Entscheidungsfindung</h2>
-    <p>Es findet keine automatisierte Entscheidungsfindung oder Profiling statt.</p>
+    <h2>{{ 'privacy.automaticDecisionsTitle' | transloco }}</h2>
+    <p>{{ 'privacy.automaticDecisionsText' | transloco }}</p>
+  </div>
+</section> -->
+
+<section class="privacy">
+  <div class="privacy__container">
+    <h1>{{ 'privacy.title' | transloco }}</h1>
+
+    <p>{{ 'privacy.intro' | transloco }}</p>
+
+    <h2>{{ 'privacy.responsibleTitle' | transloco }}</h2>
+    <p>
+      Eid Aden<br />
+      Brandenburger Str. 7<br />
+      65428 Rüsselsheim<br />
+      E-Mail: eiddev42@gmail.com
+    </p>
+
+    <h2>{{ 'privacy.collectionTitle' | transloco }}</h2>
+
+    <h3>{{ 'privacy.contactFormTitle' | transloco }}</h3>
+    <p>{{ 'privacy.contactFormText1' | transloco }}</p>
+    <p>{{ 'privacy.contactFormText2' | transloco }}</p>
+
+    <h3>{{ 'privacy.emailRequestTitle' | transloco }}</h3>
+    <p>{{ 'privacy.emailRequestText' | transloco }}</p>
+
+    <h2>{{ 'privacy.hostingTitle' | transloco }}</h2>
+    <p>{{ 'privacy.hostingText1' | transloco }}</p>
+
+    <p>
+      ALL-INKL.COM – Neue Medien Münnich<br />
+      Hauptstraße 68<br />
+      02742 Friedersdorf
+    </p>
+
+    <p>{{ 'privacy.hostingText2' | transloco }}</p>
+
+    <h2>{{ 'privacy.logFilesTitle' | transloco }}</h2>
+    <p>{{ 'privacy.logFilesText' | transloco }}</p>
+
+    <ul>
+      <li>{{ 'privacy.logBrowser' | transloco }}</li>
+      <li>{{ 'privacy.logOS' | transloco }}</li>
+      <li>{{ 'privacy.logReferrer' | transloco }}</li>
+      <li>{{ 'privacy.logHostname' | transloco }}</li>
+      <li>{{ 'privacy.logTime' | transloco }}</li>
+    </ul>
+
+    <p>{{ 'privacy.logFilesEnd' | transloco }}</p>
+
+    <h2>{{ 'privacy.cookiesTitle' | transloco }}</h2>
+    <p>{{ 'privacy.cookiesText' | transloco }}</p>
+
+    <h2>{{ 'privacy.rightsTitle' | transloco }}</h2>
+    <p>{{ 'privacy.rightsText' | transloco }}</p>
+
+    <ul>
+      <li>{{ 'privacy.rightInfo' | transloco }}</li>
+      <li>{{ 'privacy.rightDelete' | transloco }}</li>
+      <li>{{ 'privacy.rightRestriction' | transloco }}</li>
+      <li>{{ 'privacy.rightWithdraw' | transloco }}</li>
+      <li>{{ 'privacy.rightComplaint' | transloco }}</li>
+    </ul>
+
+    <h2>{{ 'privacy.storageTitle' | transloco }}</h2>
+    <p>{{ 'privacy.storageText' | transloco }}</p>
+
+    <h2>{{ 'privacy.decisionTitle' | transloco }}</h2>
+    <p>{{ 'privacy.decisionText' | transloco }}</p>
   </div>
 </section>

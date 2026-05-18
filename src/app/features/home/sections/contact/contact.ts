@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Buttons } from '../../../../shared/ui/buttons/buttons';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, Buttons],
+  imports: [FormsModule, Buttons, TranslocoPipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

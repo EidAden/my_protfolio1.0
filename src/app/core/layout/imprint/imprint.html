@@ -1,9 +1,9 @@
 <section class="imprint">
   <div class="imprint__container">
-    <h1 class="imprint__title">Impressum</h1>
+    <h1 class="imprint__title">{{ 'imprint.title' | transloco }}</h1>
 
     <div class="imprint__section imprint__fade">
-      <h2>Angaben gemäß § 5 DDG</h2>
+      <h2>{{ 'imprint.legalInfoTitle' | transloco }}</h2>
       <p><strong>Eid Aden Abdi</strong></p>
       <p>Brandenburger Str. 7</p>
       <p>65428 Rüsselsheim</p>
@@ -11,30 +11,27 @@
     </div>
 
     <div class="imprint__section imprint__fade imprint__fade--delay-1">
-      <h2>Kontakt</h2>
+      <h2>{{ 'imprint.contactTitle' | transloco }}</h2>
       <p>
-        Telefon:
+        {{ 'imprint.phoneLabel' | transloco }}:
         <a href="tel:+491606386105">+49 160 6386105</a>
       </p>
       <p>
-        E-Mail:
+        {{ 'imprint.emailLabel' | transloco }}:
         <a href="mailto:eidaden24@gmail.com">eidaden24@gmail.com</a>
       </p>
     </div>
 
     <div class="imprint__section imprint__fade imprint__fade--delay-2">
-      <h2>Quelle</h2>
+      <h2>{{ 'imprint.sourceTitle' | transloco }}</h2>
       <p>
-        Erstellt mit dem Impressum-Generator von WebsiteWissen.com. Rechtstext von der Kanzlei
-        Hasselbach.
+        {{ 'imprint.sourceText' | transloco }}
       </p>
     </div>
 
     <div class="imprint__footer imprint__fade imprint__fade--delay-3">
-      <p>© Eid Aden 2026</p>
-      <p>Legal Notice</p>
+      <p>{{ 'imprint.footerCopyright' | transloco }}</p>
+      <p>{{ 'imprint.footerLegal' | transloco }}</p>
     </div>
   </div>
 </section>
-
-<app-buttons class="buttons"></app-buttons>

@@ -9,5 +9,126 @@
     "titleFrontend": "FRONTEND",
     "titleDeveloper": "DEVELOPER",
     "scroll": "Scroll"
+  },
+
+  "about": {
+    "description1": "I’m a passionate frontend developer who enjoys building modern, responsive, and user-friendly web applications. Programming inspires me because it allows me to turn ideas into real digital experiences while continuously learning new technologies.",
+
+    "description2": "I improve my coding skills through personal projects, practice, and curiosity about modern frontend development. I enjoy solving problems with analytical thinking, creativity, and persistence, always searching for clean and efficient solutions. Every challenge is an opportunity to learn, grow, and become a better developer."
+  },
+
+  "infos": {
+    "title": "Let's work together",
+    "subtitle": "I am",
+    "remote": "open to work remote",
+    "relocate": "open to relocate",
+    "location": "located in Frankfurt"
+  },
+  "skills": {
+    "title": "Skill set"
+  },
+
+  "projects": {
+    "title": "My Works",
+    "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+
+  "projectsDes": {
+    "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+
+    "polloDescription": "A small jump-and-run game with object-oriented JavaScript. Fight enemies, collect coins and bottles, and defeat the boss.",
+
+    "bubbleDescription": "A chat application for team communication with channels, direct messages, and a clean responsive interface.",
+
+    "pokedexDescription": "A Pokédex app that loads Pokémon data from an API and displays details like type, stats, and evolution."
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Got a problem to solve?",
+    "text": "I am a Frontend Developer focused on clean code and modern design. I am looking for opportunities to contribute and grow — feel free to contact me.",
+    "note": "Need a Frontend developer?",
+    "noteHighlight": "Contact me!"
+  },
+
+  "contactPrivacy": {
+    "privacyText": "I've read the",
+    "privacyLink": "privacy policy",
+    "privacyEnd": "and agree to the processing of my data."
+  },
+
+  "imprint": {
+    "title": "Imprint",
+    "legalInfoTitle": "Information according to § 5 DDG",
+    "name": "Eid Aden Abdi",
+    "street": "Brandenburger Str. 7",
+    "city": "65428 Rüsselsheim",
+    "country": "Germany",
+
+    "contactTitle": "Contact",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+
+    "sourceTitle": "Source",
+    "sourceText": "Created with the imprint generator from WebsiteWissen.com. Legal text by Kanzlei Hasselbach.",
+
+    "footerCopyright": "© Eid Aden 2026",
+    "footerLegal": "Legal Notice"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+
+    "intro": "The protection of your personal data is very important to me. I process your personal data confidentially and in accordance with the legal data protection regulations and this privacy policy.",
+
+    "responsibleTitle": "1. Responsible Party",
+    "name": "Eid Aden",
+    "street": "Brandenburger Str. 7",
+    "city": "65428 Rüsselsheim",
+    "email": "Email: eiddev42@gmail.com",
+
+    "collectionTitle": "2. Data Collection on This Website",
+
+    "contactFormTitle": "Contact Form",
+    "contactFormText1": "If you send me inquiries via the contact form, your details from the form, including the contact information you provide there, will be stored for the purpose of processing the request and in case of follow-up questions.",
+    "contactFormText2": "The processing of this data is carried out on the basis of Art. 6 Para. 1 lit. b GDPR or on the basis of your consent according to Art. 6 Para. 1 lit. a GDPR.",
+
+    "emailRequestTitle": "Request by Email",
+    "emailRequestText": "If you contact me by email, your request including all resulting personal data will be stored for processing purposes.",
+
+    "hostingTitle": "3. Hosting",
+    "hostingText1": "This website is hosted by the following provider:",
+    "hostingProvider": "ALL-INKL.COM – Neue Medien Münnich",
+    "hostingStreet": "Hauptstraße 68",
+    "hostingCity": "02742 Friedersdorf",
+    "hostingText2": "The use is based on the interest of a secure and reliable provision of this website according to Art. 6 Para. 1 lit. f GDPR.",
+
+    "logFilesTitle": "4. Server Log Files",
+    "logFilesText": "The website provider automatically collects and stores information in so-called server log files, which your browser automatically transmits. These are:",
+
+    "logBrowser": "Browser type and browser version",
+    "logOS": "Operating system used",
+    "logReferrer": "Referrer URL",
+    "logHostname": "Hostname of the accessing computer",
+    "logTime": "Time of the server request",
+
+    "logFilesEnd": "This data is not merged with other data sources.",
+
+    "cookiesTitle": "5. Cookies",
+    "cookiesText": "This website does not use cookies or tracking tools.",
+
+    "rightsTitle": "6. Your Rights",
+    "rightsText": "You have the right at any time to:",
+
+    "rightInfo": "Information about your stored data",
+    "rightDelete": "Correction or deletion of your data",
+    "rightRestriction": "Restriction of processing",
+    "rightWithdraw": "Withdrawal of your consent",
+    "rightComplaint": "Complaint to a supervisory authority",
+
+    "storageTitle": "7. Storage Duration",
+    "storageText": "Your personal data will remain with me until the purpose of the data processing no longer applies or you request deletion, provided that there are no legal retention obligations.",
+
+    "decisionTitle": "8. No Automated Decision-Making",
+    "decisionText": "No automated decision-making or profiling takes place."
   }
 }

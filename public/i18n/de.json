@@ -9,5 +9,126 @@
     "titleFrontend": "FRONTEND",
     "titleDeveloper": "ENTWICKLER",
     "scroll": "Scrollen"
+  },
+
+  "about": {
+    "description1": "Ich bin ein leidenschaftlicher Frontend-Entwickler und entwickle moderne, responsive und benutzerfreundliche Webanwendungen. Programmieren inspiriert mich, weil ich dadurch Ideen in echte digitale Erlebnisse verwandeln und gleichzeitig ständig neue Technologien lernen kann.",
+
+    "description2": "Ich verbessere meine Coding-Skills durch persönliche Projekte, Übung und meine Neugier auf moderne Frontend-Entwicklung. Ich löse Probleme mit analytischem Denken, Kreativität und Ausdauer und suche dabei immer nach sauberen und effizienten Lösungen. Jede Herausforderung ist für mich eine Möglichkeit zu lernen, zu wachsen und ein besserer Entwickler zu werden."
+  },
+  "infos": {
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Ich bin",
+    "remote": "offen für Remote-Arbeit",
+    "relocate": "bereit umzuziehen",
+    "location": "ansässig in Frankfurt"
+  },
+
+  "skills": {
+    "title": "Fähigkeiten"
+  },
+
+  "projects": {
+    "title": "Meine Projekte",
+    "description": "Entdecke hier eine Auswahl meiner Projekte – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "projectsDes": {
+    "joinDescription": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen und weise Benutzern sowie Kategorien Aufgaben zu.",
+
+    "polloDescription": "Ein kleines Jump-and-Run-Spiel mit objektorientiertem JavaScript. Kämpfe gegen Gegner, sammle Münzen und Flaschen und besiege den Endboss.",
+
+    "bubbleDescription": "Eine Chat-Anwendung für Teamkommunikation mit Channels, Direktnachrichten und einer modernen responsiven Benutzeroberfläche.",
+
+    "pokedexDescription": "Eine Pokédex-App, die Pokémon-Daten aus einer API lädt und Details wie Typ, Werte und Entwicklungen anzeigt."
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "text": "Ich bin Frontend-Entwickler mit Fokus auf sauberen Code und modernes Design. Ich suche nach Möglichkeiten, mich einzubringen und weiterzuentwickeln — kontaktiere mich gerne.",
+    "note": "Du brauchst einen Frontend-Entwickler?",
+    "noteHighlight": "Kontaktiere mich!"
+  },
+
+  "contactPrivacy": {
+    "privacyText": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyEnd": "gelesen und stimme der Verarbeitung meiner Daten zu."
+  },
+
+  "imprint": {
+    "title": "Impressum",
+    "legalInfoTitle": "Angaben gemäß § 5 DDG",
+    "name": "Eid Aden Abdi",
+    "street": "Brandenburger Str. 7",
+    "city": "65428 Rüsselsheim",
+    "country": "Deutschland",
+
+    "contactTitle": "Kontakt",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail",
+
+    "sourceTitle": "Quelle",
+    "sourceText": "Erstellt mit dem Impressum-Generator von WebsiteWissen.com. Rechtstext von der Kanzlei Hasselbach.",
+
+    "footerCopyright": "© Eid Aden 2026",
+    "footerLegal": "Rechtlicher Hinweis"
+  },
+
+  "privacy": {
+    "title": "Datenschutzerklärung",
+
+    "intro": "Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+
+    "responsibleTitle": "1. Verantwortliche Stelle",
+    "name": "Eid Aden",
+    "street": "Brandenburger Str. 7",
+    "city": "65428 Rüsselsheim",
+    "email": "E-Mail: eiddev42@gmail.com",
+
+    "collectionTitle": "2. Datenerfassung auf dieser Website",
+
+    "contactFormTitle": "Kontaktformular",
+    "contactFormText1": "Wenn Sie mir über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.",
+    "contactFormText2": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO oder auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.",
+
+    "emailRequestTitle": "Anfrage per E-Mail",
+    "emailRequestText": "Wenn Sie mich per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung gespeichert.",
+
+    "hostingTitle": "3. Hosting",
+    "hostingText1": "Diese Website wird bei folgendem Anbieter gehostet:",
+    "hostingProvider": "ALL-INKL.COM – Neue Medien Münnich",
+    "hostingStreet": "Hauptstraße 68",
+    "hostingCity": "02742 Friedersdorf",
+    "hostingText2": "Die Nutzung erfolgt im Interesse einer sicheren und zuverlässigen Bereitstellung dieser Website gemäß Art. 6 Abs. 1 lit. f DSGVO.",
+
+    "logFilesTitle": "4. Server-Log-Dateien",
+    "logFilesText": "Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt. Dies sind:",
+
+    "logBrowser": "Browsertyp und Browserversion",
+    "logOS": "verwendetes Betriebssystem",
+    "logReferrer": "Referrer URL",
+    "logHostname": "Hostname des zugreifenden Rechners",
+    "logTime": "Uhrzeit der Serveranfrage",
+
+    "logFilesEnd": "Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.",
+
+    "cookiesTitle": "5. Cookies",
+    "cookiesText": "Diese Website verwendet keine Cookies oder Tracking-Tools.",
+
+    "rightsTitle": "6. Ihre Rechte",
+    "rightsText": "Sie haben jederzeit das Recht auf:",
+
+    "rightInfo": "Auskunft über Ihre gespeicherten Daten",
+    "rightDelete": "Berichtigung oder Löschung Ihrer Daten",
+    "rightRestriction": "Einschränkung der Verarbeitung",
+    "rightWithdraw": "Widerruf Ihrer Einwilligung",
+    "rightComplaint": "Beschwerde bei einer Aufsichtsbehörde",
+
+    "storageTitle": "7. Speicherdauer",
+    "storageText": "Ihre personenbezogenen Daten verbleiben bei mir, bis der Zweck der Datenverarbeitung entfällt oder Sie die Löschung verlangen, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+
+    "decisionTitle": "8. Keine automatisierte Entscheidungsfindung",
+    "decisionText": "Es findet keine automatisierte Entscheidungsfindung oder Profiling statt."
   }
 }

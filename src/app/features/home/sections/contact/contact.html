@@ -14,20 +14,19 @@
   </div>
 
   <div class="contact-inner">
-    <h2 class="contact-title">Contact</h2>
+    <h2 class="contact-title">{{ 'contact.title' | transloco }}</h2>
 
     <div class="contact-container">
       <div class="contact-left">
-        <h3>Got a problem to solve?</h3>
+        <h3>{{ 'contact.subtitle' | transloco }}</h3>
 
         <p class="contact-text">
-          I am a Frontend Developer focused on clean code and modern design. I am looking for
-          opportunities to contribute and grow — feel free to contact me.
+          {{ 'contact.text' | transloco }}
         </p>
 
         <p class="contact-note">
-          Need a Frontend developer?
-          <span>Contact me!</span>
+          {{ 'contact.note' | transloco }}
+          <span>{{ 'contact.noteHighlight' | transloco }}</span>
         </p>
       </div>
 
@@ -129,9 +128,17 @@
               #privacyRef="ngModel"
               required
             />
-            <label for="privacy">
+            <!--  <label for="privacy">
               I've read the <a href="/privacy">privacy policy</a> and agree to the processing of my
               data.
+            </label> -->
+
+            <label for="privacy">
+              {{ 'contactPrivacy.privacyText' | transloco }}
+              <a href="/privacy">
+                {{ 'contactPrivacy.privacyLink' | transloco }}
+              </a>
+              {{ 'contactPrivacy.privacyEnd' | transloco }}
             </label>
           </div>
 
