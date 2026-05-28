@@ -12,7 +12,7 @@ export class Buttons {
   @Input() font_size: string = '16px';
   @Input() font_family: string = 'Poppins';
   @Input() font_weight: string = '400';
-  @Input() padding: string = '10px 30px';
+  @Input() padding: string = '2px 3px';
   @Input() text: string = 'Github';
   @Input() color_text: string = '#5988FF';
   @Input() disabled: boolean = false;

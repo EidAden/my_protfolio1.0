@@ -82,3 +82,12 @@ $color_primary: #5988ff;
   box-shadow: none;
   animation: none;
 }
+
+.contact {
+}
+
+@media (max-width: 720px) {
+  .contact {
+    width: 350px;
+  }
+}
