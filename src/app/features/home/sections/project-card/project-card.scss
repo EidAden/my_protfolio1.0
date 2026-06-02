@@ -83,10 +83,16 @@ $bc_color-white: #ffffff;
   width: 80px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .project-card {
     flex-direction: column;
     text-align: center;
+  }
+  .project-description {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+    width: 500px;
   }
 
   .project-image img {
@@ -130,4 +136,27 @@ a {
   justify-content: center;
   gap: 16px;
   flex-direction: row-reverse;
+}
+
+@media (max-width: 400px) {
+  .project-image img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(205, 190, 190, 0.1);
+  }
+  .project-description {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: start;
+  }
+  .project-title {
+    margin-top: 10px;
+  }
+  .project-info {
+    margin-top: 10px;
+  }
+  .project-card {
+    padding: 20px;
+    gap: 20px;
+  }
 }

@@ -242,10 +242,14 @@ a {
     padding-block: 88px;
     padding-inline: 14px;
   }
+  .about__title {
+    text-align: center;
+  }
 
   .about__ellipse--big {
-    top: -18px;
+    top: -50px;
     right: 34px;
+    left: 40%;
   }
 
   .about__ellipse--small {

@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Buttons } from '../../../../shared/ui/buttons/buttons';
 import { TranslocoPipe } from '@jsverse/transloco';
 
