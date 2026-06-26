@@ -5,10 +5,10 @@
       alt="Logo"
       class="logo-menu1"
     />
-    <img src="images/mobile/menu.png" alt="Menu" (click)="openMenu()" />
+    <img src="images/mobile/menu.png" alt="Menu" (click)="uiService.openMenu()" />
   </div>
 
-  <nav class="nav_mobile" [class.open]="isMenuOpen">
+  <nav class="nav_mobile" [class.open]="uiService.isMenuOpen()">
     <div class="menu_logs">
       <img
         [src]="isImprintPage() ? 'images/mobile/logo-blue.png' : 'images/mobile/logo-blue.png'"
@@ -21,27 +21,41 @@
           src="images/mobile/close1.png"
           alt="default-icon"
           class="icon default"
-          (click)="closeMenu()"
+          (click)="uiService.closeMenu()"
         />
         <img
           src="images/mobile/close0.png"
           alt="hover-icon"
           class="icon hover"
-          (click)="closeMenu()"
+          (click)="uiService.closeMenu()"
         />
       </div>
     </div>
 
     <ul class="nav__list">
-      <li><a href="#about" (click)="closeMenu()">About me</a></li>
-      <li><a href="#skills" (click)="closeMenu()">Skill set</a></li>
-      <li><a href="#work" (click)="closeMenu()">My work</a></li>
-      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+      <li><a href="#about" (click)="uiService.closeMenu()">About me</a></li>
+      <li><a href="#skills" (click)="uiService.closeMenu()">Skill set</a></li>
+      <li><a href="#work" (click)="uiService.closeMenu()">My work</a></li>
+      <li><a href="#contact" (click)="uiService.closeMenu()">Contact</a></li>
 
       <li class="nav__lang">
-        <a href="#">DE</a>
+        <a
+          href="#"
+          (click)="uiService.changeLangAndCloseMenu('de'); $event.preventDefault()"
+          [class.active]="uiService.activeLang === 'de'"
+        >
+          DE
+        </a>
+
         <span>/</span>
-        <a href="#" class="active">EN</a>
+
+        <a
+          href="#"
+          (click)="uiService.changeLangAndCloseMenu('en'); $event.preventDefault()"
+          [class.active]="uiService.activeLang === 'en'"
+        >
+          EN
+        </a>
       </li>
     </ul>
   </nav>

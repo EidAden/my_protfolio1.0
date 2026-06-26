@@ -1,3 +1,10 @@
+$font-Bahloo: 'Baloo 2';
+$font-poppins: 'Poppins';
+$font-Montserrat: 'Montserrat';
+$color_primary: #5988ff;
+$color_secondary: #333;
+$bc_color-white: #ffffff;
+
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
@@ -87,8 +94,9 @@
 
   a {
     @include nav-link;
-    font-size: 28px;
-    font-weight: 500;
+    font-family: $font-Montserrat;
+    font-size: 44px;
+    font-weight: 600;
   }
 }
 
@@ -99,8 +107,10 @@
   gap: 8px;
 
   span {
-    font-size: 32px;
+    font-size: 54px;
     color: #5988ff;
+    font-weight: 400;
+    font-family: $font-Bahloo;
   }
 
   a {
@@ -119,7 +129,7 @@
 
 .close_icon {
   position: relative;
-  width: 32px; // kannst du anpassen
+  width: 32px;
   height: 32px;
   cursor: pointer;
 
@@ -161,4 +171,15 @@
 .logo-menu1 {
   width: 32px;
   height: auto;
+}
+
+.nav__lang a {
+  font-size: 44px;
+  font-family: $font-Montserrat;
+  font-weight: 600;
+  cursor: pointer;
+  color: $color_primary;
+  &:hover {
+    font-weight: 700;
+  }
 }

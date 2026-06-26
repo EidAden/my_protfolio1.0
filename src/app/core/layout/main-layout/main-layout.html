@@ -1,11 +1,7 @@
 <div class="main-layout">
   <app-header class="header"></app-header>
 
-  <app-mobile-menu
-    class="mobile-menu"
-    [isMenuOpen]="isMenuOpen"
-    (menuChange)="isMenuOpen = $event"
-  ></app-mobile-menu>
+  <app-mobile-menu class="mobile-menu"></app-mobile-menu>
 
   <main class="layout-content">
     <router-outlet></router-outlet>

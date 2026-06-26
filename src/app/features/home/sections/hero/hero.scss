@@ -62,7 +62,7 @@ h4,
   font-family: $font-Montserrat, serif;
   font-weight: 500;
   font-size: clamp(28px, 5vw, 64px);
-  line-height: 0.8;
+  line-height: 1.2;
   letter-spacing: 0;
   vertical-align: middle;
   margin: 0;
@@ -134,7 +134,7 @@ h4,
   display: none;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1370px) {
   .bg-hero {
     height: 100%;
     min-height: 710px;
@@ -249,7 +249,7 @@ h4,
     }
     .hero-name {
       color: #eaf0ff;
-      font-size: 40px;
+      font-size: 34px !important;
       margin: 0;
     }
     .hero-title {
@@ -263,7 +263,7 @@ h4,
     position: absolute;
     width: 600px;
     height: 612px;
-    left: -290px;
+    left: -120px;
   }
   .hero-bottom {
     right: clamp(700px, 6vw, 300px);

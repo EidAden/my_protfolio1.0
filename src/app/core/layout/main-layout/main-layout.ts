@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
 import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -11,15 +12,6 @@ import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
   styleUrl: './main-layout.scss',
 })
 export class MainLayout {
+  uiService = inject(UiService);
   isMenuOpen = false;
-
-  toggleMenu(open: boolean) {
-    this.isMenuOpen = open;
-
-    if (open) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
-  }
 }

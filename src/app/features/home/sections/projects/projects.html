@@ -1,56 +1,203 @@
-<div class="projects-section">
-  <div class="background-shapes">
-    <div class="ell7">
-      <img src="images/back-img/Ellipse7.png" alt="" />
+<div class="container" id="projects">
+  <section class="project_header">
+    <div class="header-img">
+      <img class="head-right" src="images/back-img/Ellipse11.png" alt="" aria-hidden="true" />
+      <img class="header_ellipse10" src="images/back-img/Ellipse10.png" alt="" aria-hidden="true" />
     </div>
+    <div class="project__info">
+      <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
 
-    <div class="ell8">
-      <img src="images/back-img/Ellipse8.png" alt="" />
-    </div>
-
-    <div class="ell4">
-      <img src="images/back-img/Ellipse4.png" alt="" />
-    </div>
-
-    <div class="ell10">
-      <img src="images/back-img/Ellipse10.png" alt="" />
-    </div>
-
-    <div class="ell9">
-      <img src="images/back-img/Ellipse9.png" alt="" />
-    </div>
-
-    <div class="ell11">
-      <img src="images/back-img/Ellipse11.png" alt="" />
-    </div>
-
-    <div class="ell12">
-      <img src="images/back-img/Ellipse12.png" alt="" />
-    </div>
-  </div>
-
-  <div class="projects-content" id="work">
-    <div class="text_section">
-      <h2 class="overlay_title">{{ 'projects.title' | transloco }}</h2>
-      <p class="text_info">
+      <p class="project__text">
         {{ 'projects.description' | transloco }}
       </p>
     </div>
+  </section>
 
-    <div class="overlay_container">
-      @for (project of projects; track project.id) {
-        <app-project-card
-          [id]="project.id"
-          [title]="project.title"
-          [tech]="project.tech"
-          [description]="project.description"
-          [image]="project.image"
-          [github]="project.github"
-          [live]="project.live"
-          [reverse]="project.reverse"
-        >
-        </app-project-card>
-      }
+  <section class="project_join project--img-left">
+    <img
+      class="blob blob--join-left"
+      src="images/back-img/Ellipse11.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="project__image">
+      <img src="images/projects/join.png" alt="Join Kanban Tool" />
     </div>
-  </div>
+
+    <div class="project__info">
+      <h2 class="project__title">Join</h2>
+      <p class="project__stack">Angular | TypeScript | HTML | CSS | Firebase</p>
+      <p class="project__desc">
+        {{ 'projectsDes.joinDescription' | transloco }}
+      </p>
+
+      <div class="project__buttons">
+        <app-buttons
+          class="hiden-btn"
+          text="Live Test"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="white"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-disk"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#fff"
+          border_radius="10px"
+          color_text="#5988ff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="120px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-hiden"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="#fff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 2: Pollo Loco — text left, image right -->
+  <section class="project project--img-right">
+    <img
+      class="blob blob--pollo-right"
+      src="images/back-img/Ellipse9.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="blob blob--pollo-dot"
+      src="images/back-img/Ellipse10.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="project__info">
+      <h2 class="project__title project__title--blue">Pollo Loco</h2>
+      <p class="project__stack">JavaScript | HTML | CSS</p>
+      <p class="project__desc">
+        {{ 'projectsDes.polloDescription' | transloco }}
+      </p>
+      <div class="project__buttons">
+        <app-buttons
+          class="hiden-btn"
+          text="Live Test"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="white"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-disk"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#fff"
+          border_radius="10px"
+          color_text="#5988ff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="120px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-hiden"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="#fff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+      </div>
+    </div>
+    <div class="project__image">
+      <img src="images/projects/pollo.png" alt="El Pollo Loco Game" />
+    </div>
+  </section>
+
+  <!-- PROJECT 4: Pokédex — text left, image right -->
+  <section class="project project--img-right">
+    <img
+      class="blob blob--pokedex-right"
+      src="images/back-img/Ellipse10.png"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <div class="project__info">
+      <h2 class="project__title project__title--blue">Pokédex</h2>
+      <p class="project__stack">JavaScript | HTML | CSS | Api</p>
+      <p class="project__desc">
+        {{ 'projectsDes.pokedexDescription' | transloco }}
+      </p>
+      <div class="project__buttons">
+        <app-buttons
+          class="hiden-btn"
+          text="Live Test"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="white"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-disk"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#fff"
+          border_radius="10px"
+          color_text="#5988ff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="120px"
+          padding="0"
+        ></app-buttons>
+        <app-buttons
+          class="github-btn-hiden"
+          text="Github"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="#fff"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+      </div>
+    </div>
+    <div class="project__image">
+      <img src="images/projects/pokedex.png" alt="Pokédex App" />
+    </div>
+  </section>
 </div>

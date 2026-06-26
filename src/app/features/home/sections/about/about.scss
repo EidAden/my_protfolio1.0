@@ -131,6 +131,13 @@ $shadow-btn: 5px 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
+/* .about__facts {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+} */
+
 .icon-swap {
   @include flex-center;
   @include icon-size(40px);
@@ -181,24 +188,66 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 1250px) {
+  .about__facts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .about__facts {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  .about__fact {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+  }
+  .group {
+    display: flex;
+    justify-content: start;
+  }
+  .about__subtitle {
+    text-align: start;
+  }
+}
+
 @media (max-width: 980px) {
   .about {
     padding-block: 56px;
     padding-inline: 16px;
   }
 
+  .about__ellipse--big {
+    top: -70px;
+  }
   .about__card {
     grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr);
     gap: 28px;
   }
 
   .about__title {
-    font-size: clamp(42px, 7vw, 72px);
+    font-size: 38px;
   }
 
   .about__facts {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+  .about__fact {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+  }
+  .group {
+    display: flex;
+    justify-content: start;
   }
 
   .about__text p {
@@ -206,10 +255,16 @@ a {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1025px) {
   .about__card {
-    grid-template-columns: 1fr;
+    grid-template-columns: fr;
     gap: 36px;
+  }
+  .about__subtitle {
+    text-align: center;
+  }
+  .about__left {
+    margin-top: 40px;
   }
 
   .about__left,
@@ -227,13 +282,22 @@ a {
     margin: 0 auto;
     flex-direction: column;
     align-items: start;
-    padding-left: 50px;
   }
 
   .btn {
     width: 100%;
     max-width: 190px;
     align-self: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .about__card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about__ellipse--big {
+    top: -50px;
   }
 }
 
@@ -259,5 +323,12 @@ a {
 
   .icon-swap {
     @include icon-size(36px);
+  }
+
+  .about__facts {
+    max-width: 320px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: start;
   }
 }

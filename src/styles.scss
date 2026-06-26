@@ -29,7 +29,6 @@ html {
   src: url('/fonts/bahloo/baloo-2-v23-latin-800.woff2') format('woff2');
 }
 
-/* montserrat-regular - latin */
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -38,7 +37,6 @@ html {
   src: url('/fonts/Montserrat/montserrat-v31-latin-regular.woff2') format('woff2');
 }
 
-/* montserrat-500 - latin */
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -46,7 +44,7 @@ html {
   font-weight: 500;
   src: url('/fonts/Montserrat/montserrat-v31-latin-500.woff2') format('woff2');
 }
-/* montserrat-500italic - latin */
+
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -54,7 +52,7 @@ html {
   font-weight: 500;
   src: url('/fonts/Montserrat/montserrat-v31-latin-500italic.woff2') format('woff2');
 }
-/* montserrat-600 - latin */
+
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -62,7 +60,7 @@ html {
   font-weight: 600;
   src: url('/fonts/Montserrat/montserrat-v31-latin-600.woff2') format('woff2');
 }
-/* montserrat-600italic - latin */
+
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -74,7 +72,7 @@ html {
   font-display: swap;
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   src: url('/fonts/poppins-v24-latin-regular.woff2') format('woff2');
 }
 $font-Poppins: 'Poppins', sans-serif;

@@ -1,6 +1,7 @@
 <nav class="nav" [class.imprint]="isImprintPage()">
-  <a [routerLink]="['/']">
+  <a [routerLink]="['/']" class="nav__logo-link">
     <img
+      class="nav__logo"
       [src]="isImprintPage() ? 'images/header/logo_blue.png' : 'images/header/logo.png'"
       alt="logo"
     />
@@ -8,28 +9,22 @@
 
   <ul class="nav__list">
     <li>
-      <a href="#about">
-        {{ 'header.about' | transloco }}
-      </a>
+      <a href="#about">{{ 'header.about' | transloco }}</a>
     </li>
 
     <li>
-      <a href="#skills">
-        {{ 'header.skills' | transloco }}
-      </a>
+      <a href="#skills">{{ 'header.skills' | transloco }}</a>
     </li>
 
     <li>
-      <a href="#work">
-        {{ 'header.work' | transloco }}
-      </a>
+      <a href="#projects">{{ 'header.work' | transloco }}</a>
     </li>
 
     <li class="nav__lang">
       <a
         href="#"
-        (click)="changeLang('de'); $event.preventDefault()"
-        [class.active]="activeLang === 'de'"
+        (click)="uiService.changeLang('de'); $event.preventDefault()"
+        [class.active]="uiService.activeLang === 'de'"
       >
         DE
       </a>
@@ -38,8 +33,8 @@
 
       <a
         href="#"
-        (click)="changeLang('en'); $event.preventDefault()"
-        [class.active]="activeLang === 'en'"
+        (click)="uiService.changeLang('en'); $event.preventDefault()"
+        [class.active]="uiService.activeLang === 'en'"
       >
         EN
       </a>
