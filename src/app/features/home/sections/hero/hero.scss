@@ -134,6 +134,11 @@ h4,
   display: none;
 }
 
+@media (max-width: 1417px) {
+  .hero-name {
+    font-size: clamp(28px, 5vw, 54px) !important;
+  }
+}
 @media (max-width: 1370px) {
   .bg-hero {
     height: 100%;
@@ -177,6 +182,7 @@ h4,
     bottom: 0;
   }
 }
+
 @media (max-width: 1024px) {
   .bg-hero {
     height: 100%;
@@ -249,7 +255,7 @@ h4,
     }
     .hero-name {
       color: #eaf0ff;
-      font-size: 34px !important;
+      font-size: 32px !important;
       margin: 0;
     }
     .hero-title {

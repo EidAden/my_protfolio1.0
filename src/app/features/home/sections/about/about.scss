@@ -131,13 +131,6 @@ $shadow-btn: 5px 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
-/* .about__facts {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-direction: column;
-} */
-
 .icon-swap {
   @include flex-center;
   @include icon-size(40px);
@@ -188,6 +181,18 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 1350px) {
+  .about__title {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-Bahloo;
+    font-size: 51px;
+    font-weight: 700;
+    line-height: 0.88;
+    max-width: 606px;
+  }
+}
+
 @media (max-width: 1250px) {
   .about__facts {
     display: flex;
@@ -231,7 +236,7 @@ a {
   }
 
   .about__title {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .about__facts {

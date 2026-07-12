@@ -1,6 +1,12 @@
-$font-Bahloo: 'Baloo 2';
-$font-poppins: 'Poppins';
-$font-Montserrat: 'Montserrat';
-$color_primary: #5988ff;
-$color_secondary: #333;
-$bc_color-white: #ffffff;
+$color-primary: #5988ff;
+$color-black: #000;
+$color-white: #fff;
+
+$font-baloo: 'Baloo 2', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+$tablet: 1025px;
+$small-tablet: 880px;
+$mobile: 600px;
+$small-mobile: 400px;
+$tiny-mobile: 319px;

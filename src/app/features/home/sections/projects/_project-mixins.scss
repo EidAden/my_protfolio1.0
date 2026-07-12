@@ -1,0 +1,48 @@
+@mixin flex($justify: flex-start, $align: stretch, $direction: row, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+}
+
+@mixin typography($size, $family, $weight: 400, $color: #000, $line-height: normal) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin project-layout($justify: flex-end, $padding: 80px 120px) {
+  @include flex($justify, center, row, 8px);
+
+  position: relative;
+  padding: $padding;
+  overflow: visible;
+}
+
+@mixin project-image-hover($translate-y: -50px, $shadow: 0 16px 32px rgba(0, 0, 0, 0.15)) {
+  transform: translateY($translate-y);
+  box-shadow: $shadow;
+}

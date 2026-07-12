@@ -1,4 +1,6 @@
-@use './project-vars' as *;
+@use 'project-vars' as *;
+@use 'project-mixins' as mix;
+@use 'responsive' as responsive;
 
 *,
 *::before,
@@ -11,20 +13,19 @@
 .container {
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
 }
-//***
 
 .project_header {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
+  @include mix.flex(flex-start, center);
 
-  padding: 2.5rem 3rem;
+  position: relative;
   min-height: 220px;
+  padding: 2.5rem 3rem;
+  overflow: hidden;
+  background: $color-white;
 }
 
 .header-img {
@@ -34,75 +35,57 @@ a {
 }
 
 .head-right {
-  position: absolute;
-  right: -25px;
-  bottom: 20px;
+  @include mix.absolute($right: -25px, $bottom: 20px);
+
   width: 160px;
   height: 160px;
 }
 
 .header_ellipse10 {
-  position: absolute;
-  top: 20px;
-  left: 35%;
+  @include mix.absolute($top: 20px, $left: 35%);
+
   width: 90px;
   height: 90px;
 }
 
-.project__info {
-  position: relative;
-  z-index: 1;
-  max-width: 420px;
-}
-
 .project__header_title {
-  font-size: clamp(60px, 8vw, 94px);
-  font-weight: 700;
-  font-family: $font-Bahloo;
-  color: $color_primary;
+  @include mix.typography(clamp(60px, 8vw, 94px), $font-baloo, 700, $color-primary, 0.95);
+
   margin: 0 0 1rem;
-  line-height: 0.95;
   word-break: keep-all;
 }
+
 .project__text {
+  @include mix.typography(23px, $font-montserrat, 400, $color-black, 120%);
+
   width: 670px;
-  font-family: $font-Montserrat;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 120%;
-  color: #000000;
 }
-
-/*  */
-
-//***
 
 .blob {
   position: absolute;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
 }
 
 .blob--join-left {
-  left: -180px;
   top: 50%;
-  transform: translateY(-50%);
-  height: 340px;
+  left: -180px;
   width: auto;
+  height: 340px;
+  transform: translateY(-50%);
 }
 
 .blob--pollo-right {
-  right: -100px;
   top: 50%;
-  transform: translateY(-50%);
-  height: 502px;
+  right: -100px;
   width: 480px;
-  z-index: 0;
+  height: 502px;
+  transform: translateY(-50%);
 }
 
 .blob--pollo-dot {
-  left: 60px;
   bottom: 40px;
+  left: 60px;
   width: 48px;
   height: 48px;
 }
@@ -112,323 +95,99 @@ a {
   bottom: 180px;
 }
 
-.project {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-  padding: 80px 120px;
-  overflow: visible;
-}
-.project_join {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+// Projects layout
 
-  align-items: center;
-  gap: 8px;
-  padding: 80px 120px;
-  overflow: visible;
+.project {
+  @include mix.project-layout($justify: flex-end, $padding: 45px 35px);
+
+  margin: 0;
 }
+
+.project_join {
+  @include mix.project-layout($justify: start, $padding: 80px 120px);
+}
+
+// Project image
 
 .project__image {
-  flex: 0 0 46%;
-  max-width: 46%;
   position: relative;
   z-index: 1;
-}
+  flex: 0 0 46%;
+  max-width: 46%;
 
-.project__image img {
-  max-width: 90%;
-  width: 860px;
-  height: 860px;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  transition: transform 0.08s linear;
-  cursor: pointer;
-}
+  img {
+    display: block;
+    width: 860px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+      transform 0.08s linear,
+      box-shadow 0.08s linear;
 
-.project__image img:hover {
-  transform: translateY(-50px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    &:hover {
+      @include mix.project-image-hover;
+    }
+  }
 }
 
 .project__info {
-  flex: 1;
   position: relative;
   z-index: 1;
+  flex: 1;
+  max-width: 420px;
 }
 
 .project__title {
-  font-size: 45px;
-  font-family: $font-Bahloo;
-  font-weight: 700;
-  color: $color_primary;
+  @include mix.typography(45px, $font-baloo, 700, $color-primary);
+
   margin-bottom: 8px;
 }
 
 .project__title--blue {
-  color: $color_primary;
+  color: $color-primary;
 }
 
 .project__stack {
-  font-size: 23px;
-  font-weight: 400;
-  font-family: $font-Montserrat;
-  color: $color_primary;
+  @include mix.typography(23px, $font-montserrat, 400, $color-primary);
+
   margin-bottom: 16px;
 }
 
 .project__desc {
-  font-size: 23px;
-  font-family: $font-Montserrat;
-  line-height: 120%;
-  color: #000000;
-  margin-bottom: 28px;
+  @include mix.typography(23px, $font-montserrat, 400, $color-black, 120%);
+
   max-width: 400px;
+  margin-bottom: 28px;
 }
 
 .project__buttons {
-  display: flex;
-  justify-content: start;
-  gap: 16px;
+  @include mix.flex(flex-start, center, row, 16px);
 }
+
+// Visibility
 
 .hiden-btn {
   display: none !important;
 }
+
 .github-btn-hiden {
   display: none;
 }
-.project[_ngcontent-ng-c1273749353] {
-  margin: 0;
-  padding: 45px 35px;
-}
 
-//***
+// Project image order
 
-.project--img-right .project__image {
-  order: 1;
-}
-
-.project--img-right .project__info {
-  order: 0;
-}
-
-@media (max-width: 11250px) {
-  .header_ellipse10 {
-    left: 45%;
-  }
-}
-@media (max-width: 1025px) {
-  .project {
-    flex-direction: column !important;
-    padding: 48px 24px;
-    gap: 20px;
-    text-align: center;
-  }
-  .project_join {
-    flex-direction: column !important;
-    padding: 48px 24px;
-    gap: 20px;
-    text-align: center;
-  }
-  .hiden-btn {
-    display: block !important;
-  }
-  .github-btn-disk {
-    display: none;
-  }
-  .github-btn-hiden {
-    display: block;
-  }
-}
-@media (max-width: 800px) {
-  .project_header {
-    padding: 1.5rem;
-    min-height: 280px;
-    align-items: flex-end;
-  }
-  .head-right {
-    width: 40px;
-    height: 40px;
-    bottom: auto;
-    top: 100px;
-    left: 90%;
-    right: 40px;
-  }
-  .header_ellipse10 {
-    display: none;
-  }
-  .project__info {
-    max-width: 100%;
-  }
-  .project__text {
-    width: 100%;
-    max-width: 400;
-    font-size: 18px;
-    text-align: start;
-  }
-  .blob--pollo-dot {
-    display: none;
-  }
-}
-@media (max-width: 1025px) {
-  .project__image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  .project__image img:hover {
-    transform: translateY(-10px);
-    box-shadow: 5px 5px 15px 0px #00000026;
-  }
-  .blob--pollo-right {
-    width: 360px;
-    height: 360px;
-    top: 30%;
-  }
-  .blob--pokedex-right {
-    width: 40px;
-    right: 20px;
-    bottom: 220px;
-  }
-  .blob--join-left {
-    left: -80px;
-    top: 30%;
-    transform: translateY(-50%);
-    height: 200px;
-    width: auto;
-  }
-  .project__buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-  }
-  .hiden-btn {
-    display: block;
-  }
-  .project--img-right .project__image {
-    order: -1;
-  }
-  .project--img-right .project__info {
+.project--img-right {
+  .project__image {
     order: 1;
   }
-  .project__image {
-    flex: none;
-    max-width: 100%;
-    width: 100%;
-  }
-  .project__image img {
-    border-radius: 14px;
-  }
+
   .project__info {
-    text-align: center;
-  }
-  .project__title {
-    font-size: 1.6rem;
-    color: $color_primary;
-  }
-  .project__title--blue {
-    color: $color_primary;
-    font-family: $font-Bahloo;
-    font-weight: 700;
-  }
-  .project__stack {
-    color: $color_primary;
-    font-size: 0.88rem;
-  }
-  .project__desc {
-    font-size: 16px;
-    font-family: $font-Montserrat;
-    color: #000000;
-    max-width: 100%;
-    text-align: start;
-    max-width: 400px;
-  }
-  .project__buttons {
-    justify-content: center;
-    gap: 12px;
+    order: 0;
   }
 }
 
-@media (max-width: 600px) {
-  .blob--pokedex-right {
-    width: 30px;
-    right: 30px;
-    bottom: 240px;
-  }
-  .blob--pollo-right {
-    width: 320px;
-    height: 380px;
-    top: 25%;
-  }
-  .project__header_title {
-    font-size: clamp(40px, 8vw, 94px);
-    line-height: 0.95;
-  }
-}
-@media (max-width: 400px) {
-  .blob--pollo-right {
-    width: 220px;
-    height: 210px;
-    top: 20%;
-  }
-  .blob--join-left {
-    height: 200px;
-    top: 20%;
-  }
-  .project__header_title {
-    font-size: clamp(34px, 8vw, 94px);
-    line-height: 0.95;
-  }
-  .blob--pokedex-right {
-    width: 30px;
-    right: 30px;
-    bottom: 230px;
-  }
-}
+// Responsive styles must remain at the end
 
-@media (max-width: 319px) {
-  .blob--pokedex-right {
-    width: 20px;
-    right: 30px;
-    bottom: 260px;
-  }
-  .project__header_title {
-    font-size: clamp(28px, 8vw, 94px);
-    line-height: 0.95;
-  }
-}
-@media (max-width: 280px) {
-  .blob--pollo-right {
-    width: 180px;
-    height: 170px;
-    top: 15%;
-  }
-}
-@media (max-width: 200px) {
-  .blob--bubble-left {
-    display: none;
-  }
-  .blob--bubble-right {
-    display: none;
-  }
-  .blob--join-left {
-    display: none;
-  }
-  .blob--pokedex-right {
-    display: none;
-  }
-  .blob--pollo-dot {
-    display: none;
-  }
-  .blob--pollo-right {
-    display: none;
-  }
-}
+@include responsive.project-responsive;
