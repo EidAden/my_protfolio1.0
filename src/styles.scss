@@ -1,26 +1,26 @@
 @use '@angular/material' as mat;
 
+// Cursor Colors
+$cursor-color: #57e8a2;
+$cursor-glow: rgba(87, 232, 162, 0.6);
+
 html {
   scroll-behavior: smooth;
-}
-
-/* baloo-2-regular - latin */
+} /* baloo-2-regular - latin */
 @font-face {
   font-display: swap;
   font-family: 'Baloo 2';
   font-style: normal;
   font-weight: 400;
   src: url('/fonts/bahloo/baloo-2-v23-latin-regular.woff2') format('woff2');
-}
-/* baloo-2-700 - latin */
+} /* baloo-2-700 - latin */
 @font-face {
   font-display: swap;
   font-family: 'Baloo 2';
   font-style: normal;
   font-weight: 700;
   src: url('/fonts/bahloo/baloo-2-v23-latin-700.woff2') format('woff2');
-}
-/* baloo-2-800 - latin */
+} /* baloo-2-800 - latin */
 @font-face {
   font-display: swap;
   font-family: 'Baloo 2';
@@ -28,7 +28,6 @@ html {
   font-weight: 800;
   src: url('/fonts/bahloo/baloo-2-v23-latin-800.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -36,7 +35,6 @@ html {
   font-weight: 400;
   src: url('/fonts/Montserrat/montserrat-v31-latin-regular.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -44,7 +42,6 @@ html {
   font-weight: 500;
   src: url('/fonts/Montserrat/montserrat-v31-latin-500.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -52,7 +49,6 @@ html {
   font-weight: 500;
   src: url('/fonts/Montserrat/montserrat-v31-latin-500italic.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -60,7 +56,6 @@ html {
   font-weight: 600;
   src: url('/fonts/Montserrat/montserrat-v31-latin-600.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -81,17 +76,141 @@ $font-Montserrat: 'Montserrat', sans-serif;
 $color_primary: #5988ff;
 $color_secondary: #ffffff;
 $background_color: #000000;
-
 body {
   margin: 0;
   padding: 0;
   height: auto;
   min-height: 100%;
 }
-
 body {
   background-color: $background_color;
   color: $color_primary;
   max-height: none;
   overflow-y: auto;
+}
+
+/* @media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid #57e8a2;
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate3d(-100px, -100px, 0);
+    translate: -50% -50%;
+
+    transition:
+      width 150ms ease,
+      height 150ms ease,
+      border-color 150ms ease,
+      opacity 150ms ease;
+  }
+
+  .custom-cursor__dot {
+    width: 10px;
+    height: 10px;
+
+    background: #57e8a2;
+
+    border-radius: 50%;
+    transition:
+      width 150ms ease,
+      height 150ms ease,
+      background 150ms ease;
+
+    box-shadow:
+      0 0 8px #57e8a2,
+      0 0 18px #57e8a2,
+      0 0 32px rgba(87, 232, 162, 0.6);
+  }
+
+  .custom-cursor--hidden {
+    opacity: 0;
+  }
+}
+ */
+
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid $cursor-color;
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate3d(-100px, -100px, 0);
+    translate: -50% -50%;
+
+    transition:
+      width 150ms ease,
+      height 150ms ease,
+      border-color 150ms ease,
+      opacity 150ms ease;
+  }
+
+  .custom-cursor__dot {
+    width: 10px;
+    height: 10px;
+
+    background: $cursor-color;
+
+    border-radius: 50%;
+
+    transition:
+      width 150ms ease,
+      height 150ms ease,
+      background 150ms ease;
+
+    box-shadow:
+      0 0 8px $cursor-color,
+      0 0 18px $cursor-color,
+      0 0 32px $cursor-glow;
+  }
+
+  .custom-cursor--hidden {
+    opacity: 0;
+  }
 }

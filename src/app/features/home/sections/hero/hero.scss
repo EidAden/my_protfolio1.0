@@ -21,11 +21,11 @@ $color_secondary: #5988ff;
 
 .hero_photo {
   position: absolute;
-  width: 761px;
-  height: auto;
-  left: -3px;
+  width: 661px;
+  height: 750px;
+  left: 100px;
   z-index: 2;
-  bottom: -100px;
+  bottom: -50px;
 }
 .hero-overlay {
   position: absolute;
@@ -320,7 +320,7 @@ h4,
   }
 
   .hero_photo {
-    width: clamp(480px, 70vw, 380px);
+    width: clamp(400px, 70vw, 380px);
     left: 35%;
   }
 }

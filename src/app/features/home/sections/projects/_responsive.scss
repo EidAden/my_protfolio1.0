@@ -2,7 +2,6 @@
 @use 'project-mixins' as mix;
 
 @mixin project-responsive {
-  // Vermutlich war 11250px ein Tippfehler.
   @media (max-width: 1250px) {
     .header_ellipse10 {
       left: 45%;
@@ -47,7 +46,7 @@
 
     .project__info {
       max-width: 100%;
-      text-align: center;
+      text-align: start;
     }
 
     .project__title {

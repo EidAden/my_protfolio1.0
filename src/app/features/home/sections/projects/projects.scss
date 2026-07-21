@@ -19,7 +19,7 @@ a {
 }
 
 .project_header {
-  @include mix.flex(flex-start, center);
+  @include mix.flex(flex-start, start);
 
   position: relative;
   min-height: 220px;
@@ -166,8 +166,6 @@ a {
   @include mix.flex(flex-start, center, row, 16px);
 }
 
-// Visibility
-
 .hiden-btn {
   display: none !important;
 }
@@ -175,8 +173,6 @@ a {
 .github-btn-hiden {
   display: none;
 }
-
-// Project image order
 
 .project--img-right {
   .project__image {
@@ -187,7 +183,5 @@ a {
     order: 0;
   }
 }
-
-// Responsive styles must remain at the end
 
 @include responsive.project-responsive;

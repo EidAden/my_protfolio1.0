@@ -47,6 +47,7 @@ $primary: #5988ff;
   list-style: none;
   margin: 0;
   padding: 0 45px;
+  font-family: $font-Montserrat, serif;
 
   a {
     font-family: $font-Montserrat, sans-serif;
@@ -58,6 +59,7 @@ $primary: #5988ff;
       transform 0.25s ease,
       opacity 0.25s ease;
     font-weight: 500;
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-5px);
