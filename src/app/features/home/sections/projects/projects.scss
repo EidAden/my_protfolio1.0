@@ -23,7 +23,7 @@ a {
 
   position: relative;
   min-height: 220px;
-  padding: 2.5rem 3rem;
+  padding: 15px 8px;
   overflow: hidden;
   background: $color-white;
 }
@@ -98,13 +98,13 @@ a {
 // Projects layout
 
 .project {
-  @include mix.project-layout($justify: flex-end, $padding: 45px 35px);
+  @include mix.project-layout($justify: flex-end, $padding: 25px 20px);
 
   margin: 0;
 }
 
 .project_join {
-  @include mix.project-layout($justify: start, $padding: 80px 120px);
+  @include mix.project-layout($justify: start, $padding: 20px 40px);
 }
 
 // Project image

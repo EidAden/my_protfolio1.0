@@ -1,80 +1,99 @@
 <div class="container" id="projects">
-  <section class="project_header">
-    <div class="header-img">
-      <img class="head-right" src="images/back-img/Ellipse11.png" alt="" aria-hidden="true" />
-      <img class="header_ellipse10" src="images/back-img/Ellipse10.png" alt="" aria-hidden="true" />
-    </div>
-    <div class="project__info">
-      <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
-
-      <p class="project__text">
-        {{ 'projects.description' | transloco }}
-      </p>
-    </div>
-  </section>
-
-  <section class="project_join project--img-left">
-    <img
-      class="blob blob--join-left"
-      src="images/back-img/Ellipse11.png"
-      alt=""
-      aria-hidden="true"
-    />
-    <div class="project__image">
-      <img src="images/projects/join.png" alt="Join Kanban Tool" />
-    </div>
-
-    <div class="project__info">
-      <h2 class="project__title">Join</h2>
-      <p class="project__stack">Angular | TypeScript | HTML | CSS | Firebase</p>
-      <p class="project__desc">
-        {{ 'projectsDes.joinDescription' | transloco }}
-      </p>
-
-      <div class="project__buttons">
-        <app-buttons
-          class="hiden-btn"
-          text="Live Test"
-          font_family="Poppins, sans-serif"
-          background="#5988ff"
-          border_radius="10px"
-          color_text="white"
-          font_size="18px"
-          font_weight="400"
-          width_btn="100px"
-          height="45px"
-          padding="0"
-        ></app-buttons>
-        <app-buttons
-          class="github-btn-disk"
-          text="Github"
-          font_family="Poppins, sans-serif"
-          background="#fff"
-          border_radius="10px"
-          color_text="#5988ff"
-          font_size="18px"
-          font_weight="400"
-          width_btn="120px"
-          padding="0"
-        ></app-buttons>
-        <app-buttons
-          class="github-btn-hiden"
-          text="Github"
-          font_family="Poppins, sans-serif"
-          background="#5988ff"
-          border_radius="10px"
-          color_text="#fff"
-          font_size="18px"
-          font_weight="400"
-          width_btn="100px"
-          height="45px"
-          padding="0"
-        ></app-buttons>
+  <div class="section_header_join">
+    <section class="project_header">
+      <div class="header-img">
+        <img class="head-right" src="images/back-img/Ellipse11.png" alt="" aria-hidden="true" />
+        <img
+          class="header_ellipse10"
+          src="images/back-img/Ellipse10.png"
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-    </div>
-  </section>
+      <div class="project__info">
+        <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
 
-  <!-- PROJECT 2: Pollo Loco — text left, image right -->
+        <p class="project__text">
+          {{ 'projects.description' | transloco }}
+        </p>
+      </div>
+    </section>
+
+    <section class="project_join project--img-left">
+      <img
+        class="blob blob--join-left"
+        src="images/back-img/Ellipse11.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <div class="project__image">
+        <a
+          href="https://eidaden.com/Join/login.html?skipAnimation=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="images/projects/join.png" alt="Join Kanban Tool" />
+        </a>
+      </div>
+
+      <div class="project__info">
+        <h2 class="project__title">Join</h2>
+        <p class="project__stack">Angular | TypeScript | HTML | CSS | Firebase</p>
+        <p class="project__desc">
+          {{ 'projectsDes.joinDescription' | transloco }}
+        </p>
+
+        <div class="project__buttons">
+          <a
+            href="https://eidaden.com/Join/login.html?skipAnimation=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <app-buttons
+              class="hiden-btn"
+              text="Live Test"
+              font_family="Poppins, sans-serif"
+              background="#5988ff"
+              border_radius="10px"
+              color_text="white"
+              font_size="18px"
+              font_weight="400"
+              width_btn="100px"
+              height="45px"
+              padding="0"
+            ></app-buttons>
+          </a>
+          <app-buttons
+            class="github-btn-disk"
+            text="Github"
+            font_family="Poppins, sans-serif"
+            background="#fff"
+            border_radius="10px"
+            color_text="#5988ff"
+            font_size="18px"
+            font_weight="400"
+            width_btn="120px"
+            padding="0"
+          ></app-buttons>
+          <app-buttons
+            class="github-btn-hiden"
+            text="Github"
+            font_family="Poppins, sans-serif"
+            background="#5988ff"
+            border_radius="10px"
+            color_text="#fff"
+            font_size="18px"
+            font_weight="400"
+            width_btn="100px"
+            height="45px"
+            padding="0"
+          ></app-buttons>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <section class="project project--img-right">
     <img
       class="blob blob--pollo-right"
@@ -136,7 +155,9 @@
       </div>
     </div>
     <div class="project__image">
-      <img src="images/projects/pollo.png" alt="El Pollo Loco Game" />
+      <a href="https://eidaden.com/elpollo/" target="_blank" rel="noopener noreferrer">
+        <img src="images/projects/pollo.png" alt="El Pollo Loco Game" />
+      </a>
     </div>
   </section>
 
@@ -156,19 +177,22 @@
         {{ 'projectsDes.pokedexDescription' | transloco }}
       </p>
       <div class="project__buttons">
-        <app-buttons
-          class="hiden-btn"
-          text="Live Test"
-          font_family="Poppins, sans-serif"
-          background="#5988ff"
-          border_radius="10px"
-          color_text="white"
-          font_size="18px"
-          font_weight="400"
-          width_btn="100px"
-          height="45px"
-          padding="0"
-        ></app-buttons>
+        <a href="https://eidaden.com/pokemon" target="_blank" rel="noopener noreferrer">
+          <app-buttons
+            class="hiden-btn"
+            text="Live Test"
+            font_family="Poppins, sans-serif"
+            background="#5988ff"
+            border_radius="10px"
+            color_text="white"
+            font_size="18px"
+            font_weight="400"
+            width_btn="100px"
+            height="45px"
+            padding="0"
+          ></app-buttons>
+        </a>
+
         <app-buttons
           class="github-btn-disk"
           text="Github"
@@ -197,7 +221,9 @@
       </div>
     </div>
     <div class="project__image">
-      <img src="images/projects/pokedex.png" alt="Pokédex App" />
+      <a href="https://eidaden.com/pokemon" target="_blank" rel="noopener noreferrer">
+        <img src="images/projects/pokedex.png" alt="Pokédex App" />
+      </a>
     </div>
   </section>
 </div>

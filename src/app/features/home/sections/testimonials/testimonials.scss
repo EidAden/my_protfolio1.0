@@ -50,8 +50,8 @@ $bc_color-white: #ffffff;
 
 .testimonials_wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 .testimonial_card {
@@ -74,12 +74,15 @@ $bc_color-white: #ffffff;
     @include text-style(clamp(18px, 1.5vw, 22px), $font-Montserrat, 400);
     margin: 0;
     line-height: 1.35;
-    text-align: left;
+    text-align: start;
+    max-width: 420px;
   }
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
+  .testimonials_wrapper {
+    gap: 80px;
+  }
   .main_container {
     padding: 70px 24px 80px 24px;
 
@@ -87,13 +90,8 @@ $bc_color-white: #ffffff;
       margin-bottom: 50px;
     }
   }
-
-  .testimonials_wrapper {
-    gap: 24px;
-  }
 }
 
-/* Mobile: nach links/rechts schiebbar */
 @media (max-width: 768px) {
   .main_container {
     padding: 56px 16px 70px 16px;
@@ -101,11 +99,11 @@ $bc_color-white: #ffffff;
 
   .testimonials_wrapper {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 10px;
+    gap: 100px;
   }
 
   .testimonials_wrapper::-webkit-scrollbar {
