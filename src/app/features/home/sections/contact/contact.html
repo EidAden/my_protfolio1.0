@@ -166,13 +166,6 @@
             </label>
           </div>
 
-          <!--    @if (
-            contactForm.controls.privacy.touched &&
-            contactForm.controls.privacy.hasError('required')
-          ) {
-            <p class="error-text">Please accept the privacy policy</p>
-          } -->
-
           @if (
             contactForm.controls.privacy.invalid &&
             (contactForm.controls.privacy.touched || contactForm.controls.privacy.dirty)
