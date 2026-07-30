@@ -18,9 +18,9 @@ $bc_color-white: #ffffff;
   color: $color;
 }
 
-@mixin section-width($width: 100%, $max-width: 1440px) {
-  width: $width;
-  max-width: $max-width;
+@mixin section-width {
+  width: 100%;
+
   margin: 0 auto;
 }
 

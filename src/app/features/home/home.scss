@@ -3,22 +3,20 @@ $font-Montserrat: 'Montserrat';
 $color_primary: #5988ff;
 $color_secondary: #333;
 $bc_color-white: #ffffff;
+$her_bg_color: #eaf0ff;
 
 html,
 body {
-  height: 100%;
-}
-
-body {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
+  padding: 0;
+  background: $her_bg_color;
   font-family: $font-Montserrat, sans-serif;
 }
 
 .main-container {
-  background: $bc_color-white;
+  background: $her_bg_color;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   position: relative;
   height: auto;
@@ -42,7 +40,6 @@ body {
 
 .main_conetn_section {
   width: 100%;
-  max-width: 1440px;
   min-height: 100vh;
   color: $color_secondary;
   background: #ffffff;

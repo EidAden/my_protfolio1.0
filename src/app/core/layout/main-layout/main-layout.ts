@@ -1,7 +1,6 @@
 import { Component, inject, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from '../header/header';
-import { Footer } from '../footer/footer';
 import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
 import { UiService } from '../../services/ui.service';
 

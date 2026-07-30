@@ -1,3 +1,9 @@
+$her_bg_color: #eaf0ff;
+
 .main-layout {
   max-height: 100vh;
+
+  width: min(100% - 64px, 1440px);
+  margin-inline: auto;
+  background: $her_bg_color;
 }
