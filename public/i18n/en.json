@@ -130,5 +130,22 @@
 
     "decisionTitle": "8. No Automated Decision-Making",
     "decisionText": "No automated decision-making or profiling takes place."
+  },
+
+  "testimonials": {
+    "title": "Need a team player?",
+    "subtitle": "Here's what my colleagues say about me",
+    "projects": {
+      "join": "Project Join",
+      "kochWelt": "Project Koch Welt"
+    },
+    "quotes": {
+      "simon": "Eid is a reliable and friendly teammate. He works in a structured way, writes clean code, and is always willing to support the team. I highly recommend him as a colleague.",
+      "alessandro": "Eid collaborated effectively with the team to develop, structure, and deliver content. He is dependable, communicates well, and contributes positively to every project."
+    }
+  },
+
+  "buttons": {
+    "sendMessage": "Send a Message"
   }
 }

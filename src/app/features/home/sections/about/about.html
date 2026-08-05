@@ -3,8 +3,8 @@
     <img src="images/about/Ellipse _5.png" alt="" />
   </div>
 
-  <div class="about__ellipse about__ellipse--small">
-    <img src="images/about/Ellipse _6.png" alt="" />
+  <div class="">
+    <div class="about__ellipse--small" aria-hidden="true"></div>
   </div>
 
   <div class="about__card">
@@ -55,8 +55,13 @@
         </p>
       </div>
 
-      <a href="#contact" class="btn">
+      <!--  <a href="#contact" class="btn">
         <app-buttons text=" Send a Message" font_size="18px" width_btn="350px"></app-buttons>
+      </a> -->
+
+      <a href="#contact" class="btn">
+        <app-buttons [text]="'buttons.sendMessage' | transloco" font_size="18px" width_btn="350px">
+        </app-buttons>
       </a>
     </div>
   </div>

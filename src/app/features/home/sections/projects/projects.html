@@ -2,13 +2,9 @@
   <div class="section_header_join">
     <section class="project_header">
       <div class="header-img">
-        <img class="head-right" src="images/back-img/Ellipse11.png" alt="" aria-hidden="true" />
-        <img
-          class="header_ellipse10"
-          src="images/back-img/Ellipse10.png"
-          alt=""
-          aria-hidden="true"
-        />
+        <div class="head-right" aria-hidden="true"></div>
+
+        <div class="header_ellipse10" aria-hidden="true"></div>
       </div>
       <div class="project__info">
         <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
@@ -20,19 +16,10 @@
     </section>
 
     <section class="project_join project--img-left">
-      <img
-        class="blob blob--join-left"
-        src="images/back-img/Ellipse11.png"
-        alt=""
-        aria-hidden="true"
-      />
+      <div class="blob blob--join-left" aria-hidden="true"></div>
 
       <div class="project__image">
-        <a
-          href="https://eidaden.com/Join/login.html?skipAnimation=true"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://eidaden.com/Join/login" target="_blank" rel="noopener noreferrer">
           <img src="images/projects/join.png" alt="Join Kanban Tool" />
         </a>
       </div>
@@ -45,11 +32,7 @@
         </p>
 
         <div class="project__buttons">
-          <a
-            href="https://eidaden.com/Join/login.html?skipAnimation=true"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://eidaden.com/Join/login" target="_blank" rel="noopener noreferrer">
             <app-buttons
               class="hiden-btn"
               text="Live Test"
@@ -95,18 +78,10 @@
   </div>
 
   <section class="project project--img-right">
-    <img
-      class="blob blob--pollo-right"
-      src="images/back-img/Ellipse9.png"
-      alt=""
-      aria-hidden="true"
-    />
-    <img
-      class="blob blob--pollo-dot"
-      src="images/back-img/Ellipse10.png"
-      alt=""
-      aria-hidden="true"
-    />
+    <div class="blob blob--pollo-right" aria-hidden="true"></div>
+
+    <div class="blob blob--pollo-dot" aria-hidden="true"></div>
+
     <div class="project__info">
       <h2 class="project__title project__title--blue">Pollo Loco</h2>
       <p class="project__stack">JavaScript | HTML | CSS</p>
@@ -163,38 +138,36 @@
     </div>
   </section>
 
-  <section class="project project--img-right">
-    <img
-      class="blob blob--pokedex-right"
-      src="images/back-img/Ellipse10.png"
-      alt=""
-      aria-hidden="true"
-    />
+  <section class="project_bubble project--img-left">
+    <div class="blob blob--bubble-left" aria-hidden="true"></div>
+
+    <div class="project__image">
+      <img src="images/projects/bubble.png" alt="Join Kanban Tool" />
+    </div>
 
     <div class="project__info">
-      <h2 class="project__title project__title--blue">Pokédex</h2>
-      <p class="project__stack">JavaScript | HTML | CSS | Api</p>
+      <h2 class="project__title">Coming Soon</h2>
+      <p class="project__stack">Angular | TypeScript | HTML | CSS | Superbase</p>
       <p class="project__desc">
-        {{ 'projectsDes.pokedexDescription' | transloco }}
+        {{ 'projectsDes.joinDescription' | transloco }}
       </p>
-      <div class="project__buttons">
-        <a href="https://eidaden.com/pokemon" target="_blank" rel="noopener noreferrer">
-          <app-buttons
-            class="hiden-btn"
-            text="Live Test"
-            font_family="Poppins, sans-serif"
-            background="#5988ff"
-            border_radius="10px"
-            color_text="white"
-            font_size="18px"
-            font_weight="400"
-            width_btn="100px"
-            height="45px"
-            padding="0"
-          ></app-buttons>
-        </a>
 
+      <div class="project__buttons">
         <app-buttons
+          class="hiden-btn"
+          text="Live Test"
+          font_family="Poppins, sans-serif"
+          background="#5988ff"
+          border_radius="10px"
+          color_text="white"
+          font_size="18px"
+          font_weight="400"
+          width_btn="100px"
+          height="45px"
+          padding="0"
+        ></app-buttons>
+
+        <!-- <app-buttons
           class="github-btn-disk"
           text="Github"
           font_family="Poppins, sans-serif"
@@ -218,13 +191,8 @@
           width_btn="100px"
           height="45px"
           padding="0"
-        ></app-buttons>
+        ></app-buttons> -->
       </div>
-    </div>
-    <div class="project__image">
-      <a href="https://eidaden.com/pokemon" target="_blank" rel="noopener noreferrer">
-        <img src="images/projects/pokedex.png" alt="Pokédex App" />
-      </a>
     </div>
   </section>
 </div>

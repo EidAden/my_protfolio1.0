@@ -1,4 +1,10 @@
-$her_bg_color: #eaf0ff;
+$color-white: #ffffff;
+$color-hero-light-blue: #eaf0ff;
+$gradient-light-blue: linear-gradient(
+  179.99deg,
+  $color-white 12.89%,
+  $color-hero-light-blue 91.39%
+);
 
 html,
 body {
@@ -7,16 +13,12 @@ body {
   min-height: 100%;
 }
 
-body {
-  background: $her_bg_color;
-}
-
 .main-layout {
   position: relative;
   width: 100%;
+  max-width: 1440px;
   margin-inline: auto;
-  background: $her_bg_color;
-
+  background: $gradient-light-blue;
   margin: 0 auto;
   min-height: 100vh;
 }

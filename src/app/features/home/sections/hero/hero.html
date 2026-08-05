@@ -1,50 +1,74 @@
 <div class="hero__section" id="hero">
-  <div class="bg-hero">
-    <img class="hero_ellipse" src="images/hero/ellipse_3.png" alt="" />
-    <img class="hero_photo" src="images/hero/photo.png" alt="profile" />
+  <div class="hero-wrapper">
+    <div class="bg-hero">
+      <div class="hero_ellipse" aria-hidden="true"></div>
 
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h4 class="hero-name">
-          {{ 'hero.name' | transloco }}
-        </h4>
+      <img class="hero_photo" src="images/hero/photo.png" alt="Profile of Eid Aden" />
 
-        <h1 class="hero-title">
-          {{ 'hero.titleFrontend' | transloco }} <br />
-          {{ 'hero.titleDeveloper' | transloco }}
-        </h1>
-      </div>
-    </div>
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h4 class="hero-name">
+            {{ 'hero.name' | transloco }}
+          </h4>
 
-    <div class="hero-bottom">
-      <div class="scroll__down" *ngIf="!menuOpen">
-        <a href="#footer">
-          <img src="/images/mobile/scroll_down.png" alt="" />
-        </a>
-      </div>
-
-      <div class="disktop_menu">
-        <div class="scroll_line">
-          <p>{{ 'hero.scroll' | transloco }}</p>
-          <img src="images/hero/line.png" alt="line" />
+          <h1 class="hero-title">
+            {{ 'hero.titleFrontend' | transloco }} <br />
+            {{ 'hero.titleDeveloper' | transloco }}
+          </h1>
         </div>
 
-        <div class="social-icons">
-          <a href="https://github.com/EidAden" target="_blank" rel="noopener noreferrer">
-            <img src="images/hero/github.png" alt="github" class="github-icon" />
-          </a>
+        <!-- TestContent -->
+        <div class="hero-bottom">
+          <div class="scroll__down">
+            <a href="#footer" aria-label="Scroll to footer">
+              <img src="/images/mobile/scroll_down.png" alt="" />
+            </a>
+          </div>
 
-          <a href="mailto:eiddev24@gmail.com">
-            <img src="images/hero/email.png" alt="email" class="email-icon" />
-          </a>
+          <div class="desktop-menu">
+            <div class="scroll-indicator">
+              <span>{{ 'hero.scroll' | transloco }}</span>
+              <div class="scroll-line" aria-hidden="true"></div>
+            </div>
 
-          <a
-            href="https://www.linkedin.com/in/eid-aden-369b50147/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/hero/link.png" alt="linkedin" class="linkedin-icon" />
-          </a>
+            <div class="social-icons">
+              <a
+                href="https://github.com/EidAden"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile"
+              >
+                <span class="icon-box">
+                  <img
+                    src="images/hero/github.png"
+                    alt=""
+                    class="social-icon social-icon--github"
+                  />
+                </span>
+              </a>
+
+              <a href="mailto:eiddev24@gmail.com" aria-label="Send me an email">
+                <span class="icon-box">
+                  <img src="images/hero/email.png" alt="" class="social-icon social-icon--email" />
+                </span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/eid-aden-369b50147/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile"
+              >
+                <span class="icon-box">
+                  <img
+                    src="images/hero/link.png"
+                    alt=""
+                    class="social-icon social-icon--linkedin"
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

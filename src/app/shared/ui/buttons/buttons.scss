@@ -20,11 +20,11 @@ $color_primary: #5988ff;
   cursor: pointer;
   transform: rotate(0deg);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 
   &:not(:disabled):hover {
-    animation: colorChange 0.5s ease forwards;
+    animation: colorChange 0.3s ease forwards;
 
     transform: scale(1.08) translateY(-6px);
     box-shadow: 0 10px 25px rgba(0, 67, 240, 0.3);

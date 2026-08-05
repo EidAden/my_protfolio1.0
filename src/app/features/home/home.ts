@@ -4,12 +4,11 @@ import { About } from './sections/about/about';
 import { Testimonials } from './sections/testimonials/testimonials';
 import { Skills } from './sections/skills/skills';
 import { Contact } from './sections/contact/contact';
-import { Footer } from '../../core/layout/footer/footer';
 import { Projects } from './sections/projects/projects';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, About, Testimonials, Skills, Contact, Footer, Projects],
+  imports: [Hero, About, Testimonials, Skills, Contact, Projects],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

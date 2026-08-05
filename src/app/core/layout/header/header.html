@@ -1,10 +1,6 @@
 <nav class="nav" [class.imprint]="isImprintPage()">
   <a [routerLink]="['/']" class="nav__logo-link">
-    <img
-      class="nav__logo"
-      [src]="isImprintPage() ? 'images/header/logo_blue.png' : 'images/header/logo.png'"
-      alt="logo"
-    />
+    <img class="nav__logo" [src]="logoSrc" alt="Eid Aden Logo" />
   </a>
 
   <ul class="nav__list">

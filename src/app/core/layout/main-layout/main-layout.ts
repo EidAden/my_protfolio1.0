@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from '../header/header';
 import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
 import { UiService } from '../../services/ui.service';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-main-layout',
-  imports: [RouterOutlet, Header, Footer, MobileMenu],
+  imports: [RouterOutlet, Header, MobileMenu, Footer],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })

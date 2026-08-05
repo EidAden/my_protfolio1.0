@@ -6,7 +6,7 @@ $primary: #5988ff;
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   background: transparent;
@@ -16,6 +16,11 @@ $primary: #5988ff;
 
   &.imprint {
     background: $secondary;
+  }
+}
+@media (max-width: 1440px) {
+  .nav {
+    justify-content: space-around;
   }
 }
 

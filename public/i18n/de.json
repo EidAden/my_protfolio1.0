@@ -130,5 +130,22 @@
 
     "decisionTitle": "8. Keine automatisierte Entscheidungsfindung",
     "decisionText": "Es findet keine automatisierte Entscheidungsfindung oder Profiling statt."
+  },
+
+  "testimonials": {
+    "title": "Du suchst einen Teamplayer?",
+    "subtitle": "Das sagen meine Kollegen über mich",
+    "projects": {
+      "join": "Projekt Join",
+      "kochWelt": "Projekt Koch Welt"
+    },
+    "quotes": {
+      "simon": "Eid ist ein zuverlässiger und freundlicher Teamkollege. Er arbeitet strukturiert, schreibt sauberen Code und unterstützt das Team jederzeit. Ich kann ihn als Kollegen sehr empfehlen.",
+      "alessandro": "Eid hat effektiv mit dem Team zusammengearbeitet, um Inhalte zu entwickeln, zu strukturieren und umzusetzen. Er ist zuverlässig, kommuniziert gut und trägt positiv zu jedem Projekt bei."
+    }
+  },
+
+  "buttons": {
+    "sendMessage": "Nachricht senden"
   }
 }

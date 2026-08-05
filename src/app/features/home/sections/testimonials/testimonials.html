@@ -1,33 +1,55 @@
 <!-- <div class="main_container">
-  <h3>Ned a teamplayer?</h3>
-
-  <p>Here what my colleagues said about me</p>
-
-
-
-
-</div> -->
-
-<div class="main_container">
-  <h3>Need a teamplayer?</h3>
-  <p class="subtitle">Here what my colleagues said about me</p>
+  <h3>{{ 'testimonials.title' | transloco }}</h3>
+  <p class="subtitle">{{ 'testimonials.subtitle' | transloco }}</p>
 
   <div class="testimonials_wrapper">
     <div class="testimonial_card">
-      <h4>SimonHeistermann</h4>
+      <h4>{{ 'testimonials.simon' | transloco }}</h4>
       <span class="project">Project Join</span>
       <p class="quote">
-        “Eid is a reliable and friendly person. Work in a structured way and write clear code. I
-        highly recommend her as a colleague.”
+        {{ 'testimonials.simon' | transloco }}
+      </p>
+    </div>
+
+    <div class="testimonial_card">
+      <h4>{{ 'testimonials.alessandro' | transloco }}</h4>
+      <span class="project">{{ 'testimonials.project' | transloco }}</span>
+      <p class="quote">
+        {{ 'testimonials.alessandro' | transloco }}
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<div class="main_container">
+  <h3>{{ 'testimonials.title' | transloco }}</h3>
+
+  <p class="subtitle">
+    {{ 'testimonials.subtitle' | transloco }}
+  </p>
+
+  <div class="testimonials_wrapper">
+    <div class="testimonial_card">
+      <h4>Simon Heistermann</h4>
+
+      <span class="project">
+        {{ 'testimonials.projects.join' | transloco }}
+      </span>
+
+      <p class="quote">
+        {{ 'testimonials.quotes.simon' | transloco }}
       </p>
     </div>
 
     <div class="testimonial_card">
       <h4>Alessandro Argenziano</h4>
-      <span class="project">Koch Welt</span>
+
+      <span class="project">
+        {{ 'testimonials.projects.kochWelt' | transloco }}
+      </span>
+
       <p class="quote">
-        “Eid had to develop, format and deliver content in collaboration with the team members. She
-        is a reliable and friendly person.”
+        {{ 'testimonials.quotes.alessandro' | transloco }}
       </p>
     </div>
   </div>

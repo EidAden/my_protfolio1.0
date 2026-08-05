@@ -10,11 +10,17 @@
 
   @media (max-width: $tablet) {
     .project,
-    .project_join {
+    .project_join,
+    .project_bubble {
       flex-direction: column;
       padding: 48px 24px;
       gap: 20px;
       text-align: center;
+    }
+    @media (max-width: 1160px) {
+      .blob--bubble-left {
+        top: 160px;
+      }
     }
 
     .hiden-btn,
@@ -30,6 +36,7 @@
       flex: none;
       width: 100%;
       max-width: 100%;
+      z-index: 10;
 
       img {
         width: 100%;
@@ -46,7 +53,7 @@
 
     .project__info {
       max-width: 100%;
-      text-align: start;
+      text-align: left;
     }
 
     .project__title {
@@ -78,6 +85,7 @@
     .project--img-right {
       .project__image {
         order: -1;
+        z-index: 10;
       }
 
       .project__info {
@@ -86,23 +94,30 @@
     }
 
     .blob--pollo-right {
-      top: 30%;
-      width: 360px;
-      height: 360px;
+      top: 15%;
+      width: 300px;
     }
 
-    .blob--pokedex-right {
-      right: 20px;
-      bottom: 220px;
-      width: 40px;
-    }
-
-    .blob--join-left {
+    .blob--join-left,
+    .blob--bubble-left {
       top: 30%;
       left: -80px;
       width: auto;
       height: 200px;
       transform: translateY(-50%);
+    }
+  }
+
+  @media (max-width: 1360px) {
+    .blob--bubble-left {
+      left: 30px;
+      top: 300px;
+    }
+  }
+  @media (max-width: 1260px) {
+    .blob--bubble-left {
+      left: 20px;
+      top: 250px;
     }
   }
 
@@ -137,6 +152,11 @@
       font-size: 18px;
       text-align: left;
     }
+
+    .blob--bubble-left {
+      left: 0px;
+      top: 200px;
+    }
   }
 
   @media (max-width: $mobile) {
@@ -144,16 +164,10 @@
       font-size: clamp(40px, 8vw, 94px);
     }
 
-    .blob--pokedex-right {
-      right: 30px;
-      bottom: 240px;
-      width: 30px;
-    }
-
     .blob--pollo-right {
-      top: 25%;
-      width: 320px;
-      height: 380px;
+      top: 15%;
+      width: 200px;
+      height: 200px;
     }
   }
 
@@ -163,32 +177,21 @@
     }
 
     .blob--pollo-right {
-      top: 20%;
-      width: 220px;
-      height: 210px;
+      top: 10%;
+      width: 200px;
+      height: 150px;
     }
 
-    .blob--join-left {
+    .blob--join-left,
+    .blob--bubble-left {
       top: 20%;
       height: 200px;
-    }
-
-    .blob--pokedex-right {
-      right: 30px;
-      bottom: 230px;
-      width: 30px;
     }
   }
 
   @media (max-width: $tiny-mobile) {
     .project__header_title {
       font-size: clamp(28px, 8vw, 94px);
-    }
-
-    .blob--pokedex-right {
-      right: 30px;
-      bottom: 260px;
-      width: 20px;
     }
   }
 

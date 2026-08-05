@@ -35,23 +35,34 @@ a {
 }
 
 .head-right {
-  @include mix.absolute($right: -25px, $bottom: 20px);
-
+  top: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
   width: 160px;
-  height: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  transform: translateY(-50%);
 }
 
 .header_ellipse10 {
-  @include mix.absolute($top: 20px, $left: 35%);
-
-  width: 90px;
-  height: 90px;
+  top: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  transform: translateY(-50%);
 }
 
 .project__header_title {
-  @include mix.typography(clamp(60px, 8vw, 94px), $font-baloo, 700, $color-primary, 0.95);
+  @include mix.typography(clamp(60px, 8vw, 74px), $font-baloo, 700, $color-primary, 0.95);
+  width: max-content;
 
-  margin: 0 0 1rem;
+  margin: 0 0 25px;
   word-break: keep-all;
 }
 
@@ -61,38 +72,73 @@ a {
   width: 670px;
 }
 
+.project_bubble {
+  @include mix.project-layout($justify: start, $padding: 120px 40px);
+
+  position: relative;
+  margin: 0;
+}
+
 .blob {
   position: absolute;
   z-index: 0;
   pointer-events: none;
 }
 
-.blob--join-left {
-  top: 50%;
-  left: -180px;
-  width: auto;
-  height: 340px;
+.blob--bubble-left {
+  left: 90px;
+  top: 380px;
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
   transform: translateY(-50%);
+}
+
+.blob--join-left {
+  left: 0;
+  top: 160px;
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1441px) {
+  .blob--pollo-right {
+    right: -100px;
+    top: -50px;
+    width: 480px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  }
+
+  .head-right {
+    right: -50px;
+  }
 }
 
 .blob--pollo-right {
-  top: 50%;
-  right: -100px;
-  width: 480px;
-  height: 502px;
-  transform: translateY(-50%);
+  position: absolute;
+  top: -50px;
+  width: 360px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  z-index: 1;
 }
 
 .blob--pollo-dot {
-  bottom: 40px;
-  left: 60px;
-  width: 48px;
-  height: 48px;
-}
-
-.blob--pokedex-right {
-  right: 110px;
-  bottom: 180px;
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  transform: translateY(-50%);
 }
 
 // Projects layout
@@ -106,8 +152,6 @@ a {
 .project_join {
   @include mix.project-layout($justify: start, $padding: 20px 40px);
 }
-
-// Project image
 
 .project__image {
   position: relative;

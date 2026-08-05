@@ -50,14 +50,20 @@ $shadow-btn: 5px 5px 15px rgba(0, 0, 0, 0.15);
 
 .about__ellipse--big {
   top: -120px;
-  left: 50%;
+  left: 20%;
   width: clamp(100px, 16vw, 206px);
 }
 
 .about__ellipse--small {
-  top: 25px;
-  left: 85%;
-  width: clamp(42px, 7vw, 82px);
+  top: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+  transform: translateY(-50%);
 }
 
 .about__card {
@@ -70,6 +76,11 @@ $shadow-btn: 5px 5px 15px rgba(0, 0, 0, 0.15);
   gap: 40px;
 
   padding-top: 40px;
+}
+@media (max-width: 1440px) {
+  .about__ellipse--small {
+    right: -40px;
+  }
 }
 
 .about__left {
@@ -324,6 +335,7 @@ a {
   .about__ellipse--small {
     top: 58px;
     right: 8px;
+    width: 40px;
   }
 
   .icon-swap {
