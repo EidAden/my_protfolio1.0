@@ -42,14 +42,6 @@
     "pokedexDescription": "Eine Pokédex-App, die Pokémon-Daten aus einer API lädt und Details wie Typ, Werte und Entwicklungen anzeigt."
   },
 
-  "contact": {
-    "title": "Kontakt",
-    "subtitle": "Hast du ein Problem zu lösen?",
-    "text": "Ich bin Frontend-Entwickler mit Fokus auf sauberen Code und modernes Design. Ich suche nach Möglichkeiten, mich einzubringen und weiterzuentwickeln — kontaktiere mich gerne.",
-    "note": "Du brauchst einen Frontend-Entwickler?",
-    "noteHighlight": "Kontaktiere mich!"
-  },
-
   "contactPrivacy": {
     "privacyText": "Ich habe die",
     "privacyLink": "Datenschutzerklärung",
@@ -147,5 +139,30 @@
 
   "buttons": {
     "sendMessage": "Nachricht senden"
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Hast du ein Problem, das gelöst werden soll?",
+    "text": "Ich bin Frontend-Entwickler mit Fokus auf sauberen Code und modernes Design. Ich suche nach Möglichkeiten, mich einzubringen und weiterzuentwickeln – kontaktiere mich gerne.",
+    "note": "Suchst du einen Frontend-Entwickler?",
+    "noteHighlight": "Kontaktiere mich!",
+
+    "form": {
+      "namePlaceholder": "Dein Name",
+      "nameRequired": "Bitte gib deinen Namen ein",
+      "nameMinLength": "Dein Name muss mindestens 2 Zeichen lang sein",
+
+      "emailPlaceholder": "Deine E-Mail-Adresse",
+      "emailRequired": "Bitte gib deine E-Mail-Adresse ein",
+      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein",
+
+      "messagePlaceholder": "Deine Nachricht",
+      "messageRequired": "Bitte gib deine Nachricht ein",
+      "messageMinLength": "Deine Nachricht muss mindestens 10 Zeichen lang sein",
+
+      "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
+      "submitButton": "Sag Hallo ;)"
+    }
   }
 }

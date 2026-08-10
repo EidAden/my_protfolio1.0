@@ -37,7 +37,7 @@
               id="contact-name"
               type="text"
               formControlName="name"
-              placeholder="Your name"
+              [placeholder]="'contact.form.namePlaceholder' | transloco"
               autocomplete="name"
             />
 
@@ -62,13 +62,17 @@
             @if (
               contactForm.controls.name.touched && contactForm.controls.name.hasError('required')
             ) {
-              <p class="error-text">Your name is required</p>
+              <p class="error-text">
+                {{ 'contact.form.nameRequired' | transloco }}
+              </p>
             }
 
             @if (
               contactForm.controls.name.touched && contactForm.controls.name.hasError('minlength')
             ) {
-              <p class="error-text">Your name must be at least 2 characters</p>
+              <p class="error-text">
+                {{ 'contact.form.nameMinLength' | transloco }}
+              </p>
             }
           </div>
 
@@ -77,7 +81,7 @@
               id="contact-email"
               type="email"
               formControlName="email"
-              placeholder="Your email"
+              [placeholder]="'contact.form.emailPlaceholder' | transloco"
               autocomplete="email"
             />
 
@@ -102,13 +106,17 @@
             @if (
               contactForm.controls.email.touched && contactForm.controls.email.hasError('required')
             ) {
-              <p class="error-text">Your email is required</p>
+              <p class="error-text">
+                {{ 'contact.form.emailRequired' | transloco }}
+              </p>
             }
 
             @if (
               contactForm.controls.email.touched && contactForm.controls.email.hasError('email')
             ) {
-              <p class="error-text">Please enter a valid email address</p>
+              <p class="error-text">
+                {{ 'contact.form.emailInvalid' | transloco }}
+              </p>
             }
           </div>
 
@@ -116,7 +124,7 @@
             <textarea
               id="contact-message"
               formControlName="message"
-              placeholder="Your message"
+              [placeholder]="'contact.form.messagePlaceholder' | transloco"
             ></textarea>
 
             @if (contactForm.controls.message.touched && contactForm.controls.message.invalid) {
@@ -141,14 +149,18 @@
               contactForm.controls.message.touched &&
               contactForm.controls.message.hasError('required')
             ) {
-              <p class="error-text">Your message is required</p>
+              <p class="error-text">
+                {{ 'contact.form.messageRequired' | transloco }}
+              </p>
             }
 
             @if (
               contactForm.controls.message.touched &&
               contactForm.controls.message.hasError('minlength')
             ) {
-              <p class="error-text">Your message must be at least 10 characters</p>
+              <p class="error-text">
+                {{ 'contact.form.messageMinLength' | transloco }}
+              </p>
             }
           </div>
 
@@ -170,11 +182,13 @@
             contactForm.controls.privacy.invalid &&
             (contactForm.controls.privacy.touched || contactForm.controls.privacy.dirty)
           ) {
-            <p class="error-text">Please accept the privacy policy.</p>
+            <p class="error-text">
+              {{ 'contact.form.privacyRequired' | transloco }}
+            </p>
           }
 
           <app-buttons
-            text="Say Hello ;)"
+            [text]="'contact.form.submitButton' | transloco"
             width_btn="207px"
             font_size="23px"
             font_weight="400"

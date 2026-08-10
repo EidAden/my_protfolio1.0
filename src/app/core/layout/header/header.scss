@@ -3,19 +3,26 @@ $header_bg_color: #eaf0ff;
 $secondary: #ffffff;
 $font-Montserrat: 'Montserrat';
 $primary: #5988ff;
+$color-white: #ffffff;
+$color-hero-light-blue: #eaf0ff;
+$gradient-light-blue: linear-gradient(
+  179.99deg,
+  $color-white 12.89%,
+  $color-hero-light-blue 91.39%
+);
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  background: transparent;
+  background: $color-white;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 
   &.imprint {
-    background: $secondary;
+    background: $gradient-light-blue;
   }
 }
 @media (max-width: 1440px) {

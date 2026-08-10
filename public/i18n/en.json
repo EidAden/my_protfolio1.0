@@ -43,14 +43,6 @@
     "pokedexDescription": "A Pokédex app that loads Pokémon data from an API and displays details like type, stats, and evolution."
   },
 
-  "contact": {
-    "title": "Contact",
-    "subtitle": "Got a problem to solve?",
-    "text": "I am a Frontend Developer focused on clean code and modern design. I am looking for opportunities to contribute and grow — feel free to contact me.",
-    "note": "Need a Frontend developer?",
-    "noteHighlight": "Contact me!"
-  },
-
   "contactPrivacy": {
     "privacyText": "I've read the",
     "privacyLink": "privacy policy",
@@ -147,5 +139,30 @@
 
   "buttons": {
     "sendMessage": "Send a Message"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Got a problem to solve?",
+    "text": "I am a Frontend Developer focused on clean code and modern design. I am looking for opportunities to contribute and grow — feel free to contact me.",
+    "note": "Need a Frontend developer?",
+    "noteHighlight": "Contact me!",
+
+    "form": {
+      "namePlaceholder": "Your name",
+      "nameRequired": "Your name is required",
+      "nameMinLength": "Your name must be at least 2 characters",
+
+      "emailPlaceholder": "Your email",
+      "emailRequired": "Your email is required",
+      "emailInvalid": "Please enter a valid email address",
+
+      "messagePlaceholder": "Your message",
+      "messageRequired": "Your message is required",
+      "messageMinLength": "Your message must be at least 10 characters",
+
+      "privacyRequired": "Please accept the privacy policy.",
+      "submitButton": "Say Hello ;)"
+    }
   }
 }
