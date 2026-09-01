@@ -17,8 +17,17 @@ export class Contact {
   borderlight = '2px solid #BBBBBB';
 
   contactForm = this.fb.group({
-    name: ['', [Validators.required, Validators.minLength(2)]],
-    email: ['', [Validators.required, Validators.email]],
+    name: ['', [Validators.required, Validators.minLength(3)]],
+
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.email,
+        Validators.pattern(/^[^\s@]+@[^\s@]+\.(com|de|net|org|io|dev|eu|uk)$/i),
+      ],
+    ],
+
     message: ['', [Validators.required, Validators.minLength(10)]],
     privacy: [false, Validators.requiredTrue],
   });

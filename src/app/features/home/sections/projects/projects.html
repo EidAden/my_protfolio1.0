@@ -1,38 +1,101 @@
 <div class="container" id="projects">
-  <div class="section_header_join">
-    <section class="project_header">
-      <div class="header-img">
-        <div class="head-right" aria-hidden="true"></div>
+  <div class="blob blob--pollo-right" aria-hidden="true"></div>
 
-        <div class="header_ellipse10" aria-hidden="true"></div>
-      </div>
-      <div class="project__info">
-        <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
+  <div class="blob blob--join-left" aria-hidden="true"></div>
 
-        <p class="project__text">
-          {{ 'projects.description' | transloco }}
-        </p>
-      </div>
-    </section>
+  <div class="header_ellipse10" aria-hidden="true"></div>
+  <div class="head-right" aria-hidden="true"></div>
 
-    <section class="project_join project--img-left">
-      <div class="blob blob--join-left" aria-hidden="true"></div>
+  <div class="inner_content">
+    <div class="section_header_join">
+      <section class="project_header">
+        <div class="header-img"></div>
+        <div class="project__info">
+          <h2 class="project__header_title">{{ 'projects.title' | transloco }}</h2>
 
-      <div class="project__image">
-        <a href="https://eidaden.com/Join/login" target="_blank" rel="noopener noreferrer">
-          <img src="images/projects/join.png" alt="Join Kanban Tool" />
-        </a>
-      </div>
+          <p class="project__text">
+            {{ 'projects.description' | transloco }}
+          </p>
+        </div>
+      </section>
 
-      <div class="project__info">
-        <h2 class="project__title">Join</h2>
-        <p class="project__stack">Angular | TypeScript | HTML | CSS | Firebase</p>
-        <p class="project__desc">
-          {{ 'projectsDes.joinDescription' | transloco }}
-        </p>
-
-        <div class="project__buttons">
+      <section class="project_join project--img-left">
+        <div class="project__image">
           <a href="https://eidaden.com/Join/login" target="_blank" rel="noopener noreferrer">
+            <img src="images/projects/join.png" alt="Join Kanban Tool" />
+          </a>
+        </div>
+
+        <div class="project__info">
+          <h2 class="project__title">Join</h2>
+          <p class="project__stack">Angular | TypeScript | HTML | CSS | Firebase</p>
+          <p class="project__desc">
+            {{ 'projectsDes.joinDescription' | transloco }}
+          </p>
+
+          <div class="project__buttons">
+            <a href="https://eidaden.com/Join/login" target="_blank" rel="noopener noreferrer">
+              <app-buttons
+                class="hiden-btn"
+                text="Live Test"
+                font_family="Poppins, sans-serif"
+                background="#5988ff"
+                border_radius="10px"
+                color_text="white"
+                font_size="18px"
+                font_weight="400"
+                width_btn="100px"
+                height="45px"
+                padding="0"
+              ></app-buttons>
+            </a>
+
+            <a href="https://github.com/eidaden/join" target="_blank" rel="noopener noreferrer">
+              <app-buttons
+                class="github-btn-disk"
+                text="Github"
+                font_family="Poppins, sans-serif"
+                background="#fff"
+                border_radius="10px"
+                color_text="#5988ff"
+                font_size="18px"
+                font_weight="400"
+                width_btn="120px"
+                padding="0"
+              ></app-buttons>
+            </a>
+
+            <a href="https://github.com/eidaden/join" target="_blank" rel="noopener noreferrer">
+              <app-buttons
+                class="github-btn-hiden"
+                text="Github"
+                font_family="Poppins, sans-serif"
+                background="#5988ff"
+                border_radius="10px"
+                color_text="#fff"
+                font_size="18px"
+                font_weight="400"
+                width_btn="100px"
+                height="45px"
+                padding="0"
+              ></app-buttons>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="project project--img-right">
+      <div class="blob blob--pollo-dot" aria-hidden="true"></div>
+
+      <div class="project__info">
+        <h2 class="project__title project__title--blue">Pollo Loco</h2>
+        <p class="project__stack">JavaScript | HTML | CSS</p>
+        <p class="project__desc">
+          {{ 'projectsDes.polloDescription' | transloco }}
+        </p>
+        <div class="project__buttons">
+          <a href="https://eidaden.com/elpollo/" target="_blank" rel="noopener noreferrer">
             <app-buttons
               class="hiden-btn"
               text="Live Test"
@@ -47,8 +110,11 @@
               padding="0"
             ></app-buttons>
           </a>
-
-          <a href="https://github.com/eidaden/join" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/EidAden/El_pollo_Locco_Game"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <app-buttons
               class="github-btn-disk"
               text="Github"
@@ -63,7 +129,11 @@
             ></app-buttons>
           </a>
 
-          <a href="https://github.com/eidaden/join" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/EidAden/El_pollo_Locco_Game"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <app-buttons
               class="github-btn-hiden"
               text="Github"
@@ -80,129 +150,56 @@
           </a>
         </div>
       </div>
+      <div class="project__image">
+        <a href="https://eidaden.com/elpollo" target="_blank" rel="noopener noreferrer">
+          <img src="images/projects/pollo.png" alt="El Pollo Loco Game" />
+        </a>
+      </div>
     </section>
-  </div>
 
-  <section class="project project--img-right">
-    <div class="blob blob--pollo-right" aria-hidden="true"></div>
+    <section class="project_bubble project--img-left">
+      <div class="blob blob--bubble-left" aria-hidden="true"></div>
 
-    <div class="blob blob--pollo-dot" aria-hidden="true"></div>
+      <div class="project__image">
+        <img src="images/projects/bubble.png" alt="Join Kanban Tool" />
+      </div>
 
-    <div class="project__info">
-      <h2 class="project__title project__title--blue">Pollo Loco</h2>
-      <p class="project__stack">JavaScript | HTML | CSS</p>
-      <p class="project__desc">
-        {{ 'projectsDes.polloDescription' | transloco }}
-      </p>
-      <div class="project__buttons">
-        <a
-          href="https://github.com/EidAden/El_pollo_Locco_Game"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div class="project__info">
+        <h2 class="project__title">Coming Soon</h2>
+        <p class="project__stack">Angular | TypeScript | HTML | CSS | Superbase</p>
+        <p class="project__desc">
+          {{ 'projectsDes.joinDescription' | transloco }}
+        </p>
+
+        <div class="project__buttons">
           <app-buttons
             class="hiden-btn"
-            text="Live Test"
+            text="Coming Soon"
             font_family="Poppins, sans-serif"
             background="#5988ff"
             border_radius="10px"
             color_text="white"
             font_size="18px"
             font_weight="400"
-            width_btn="100px"
+            width_btn="150px"
             height="45px"
             padding="0"
           ></app-buttons>
-        </a>
-        <a
-          href="https://github.com/EidAden/El_pollo_Locco_Game"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
           <app-buttons
             class="github-btn-disk"
-            text="Github"
+            text="Coming Soon"
             font_family="Poppins, sans-serif"
             background="#fff"
             border_radius="10px"
             color_text="#5988ff"
             font_size="18px"
             font_weight="400"
-            width_btn="120px"
+            width_btn="150px"
             padding="0"
           ></app-buttons>
-        </a>
-
-        <a
-          href="https://github.com/EidAden/El_pollo_Locco_Game"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <app-buttons
-            class="github-btn-hiden"
-            text="Github"
-            font_family="Poppins, sans-serif"
-            background="#5988ff"
-            border_radius="10px"
-            color_text="#fff"
-            font_size="18px"
-            font_weight="400"
-            width_btn="100px"
-            height="45px"
-            padding="0"
-          ></app-buttons>
-        </a>
+        </div>
       </div>
-    </div>
-    <div class="project__image">
-      <a href="https://eidaden.com/elpollo" target="_blank" rel="noopener noreferrer">
-        <img src="images/projects/pollo.png" alt="El Pollo Loco Game" />
-      </a>
-    </div>
-  </section>
-
-  <section class="project_bubble project--img-left">
-    <div class="blob blob--bubble-left" aria-hidden="true"></div>
-
-    <div class="project__image">
-      <img src="images/projects/bubble.png" alt="Join Kanban Tool" />
-    </div>
-
-    <div class="project__info">
-      <h2 class="project__title">Coming Soon</h2>
-      <p class="project__stack">Angular | TypeScript | HTML | CSS | Superbase</p>
-      <p class="project__desc">
-        {{ 'projectsDes.joinDescription' | transloco }}
-      </p>
-
-      <div class="project__buttons">
-        <app-buttons
-          class="hiden-btn"
-          text="Coming Soon"
-          font_family="Poppins, sans-serif"
-          background="#5988ff"
-          border_radius="10px"
-          color_text="white"
-          font_size="18px"
-          font_weight="400"
-          width_btn="150px"
-          height="45px"
-          padding="0"
-        ></app-buttons>
-
-        <app-buttons
-          class="github-btn-disk"
-          text="Coming Soon"
-          font_family="Poppins, sans-serif"
-          background="#fff"
-          border_radius="10px"
-          color_text="#5988ff"
-          font_size="18px"
-          font_weight="400"
-          width_btn="150px"
-          padding="0"
-        ></app-buttons>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>

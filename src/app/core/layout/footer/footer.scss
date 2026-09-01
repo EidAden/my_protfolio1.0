@@ -20,9 +20,12 @@ $bc_color-white: #ffffff;
 
 .footer__logo {
   img {
-    width: 72px;
+    width: 100px;
     height: auto;
     display: block;
+    border-radius: 8px;
+    border: 2px solid #262e34;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
 

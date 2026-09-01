@@ -3,9 +3,9 @@
 
 .contact-section {
   position: relative;
-  overflow: hidden;
   width: 100%;
   padding: 56px 0 72px;
+  overflow: hidden;
   background: linear-gradient(to bottom, $bg-top, $bg-bottom);
 }
 
@@ -20,9 +20,10 @@
 
 .contact-title {
   @include title-style;
+
+  padding: 10px 0;
   font-size: clamp(64px, 8vw, 128px);
   line-height: 1;
-  padding: 10px 0;
 }
 
 .contact-container {
@@ -41,10 +42,12 @@
 .contact-left {
   width: 42%;
   padding-top: 20px;
+
   @include flex-column(28px);
 
   h3 {
     @include title-style;
+
     font-size: clamp(30px, 3vw, 52px);
     line-height: 1.1;
   }
@@ -80,34 +83,41 @@
 .contact-form {
   max-width: 680px;
   margin-left: auto;
+
   @include flex-column(30px);
 
   input {
     @include field-style;
+
     height: 76px;
   }
 
   textarea {
     @include field-style;
+
     min-height: 202px;
     resize: vertical;
   }
 }
 
-.form-field {
+.form-field,
+.privacy-field {
   position: relative;
+}
+
+.form-field {
   display: flex;
   flex-direction: column;
 }
 
 .status-icon {
   position: absolute;
+  top: 38px;
   right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 22px;
   height: 22px;
   pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .textarea-icon {
@@ -115,19 +125,43 @@
   transform: none;
 }
 
+/* Fehlermeldungen */
 .error-text {
-  margin-top: 6px;
-  font: 14px $font-montserrat;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 2;
+
+  margin: 0;
   color: #ff2d55;
+  font-family: $font-montserrat;
+  font-size: 14px;
+  line-height: 1.25;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
 }
 
-input.ng-touched.ng-invalid,
-textarea.ng-touched.ng-invalid {
+.error-text--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.form-field input.ng-touched.ng-invalid,
+.form-field textarea.ng-touched.ng-invalid {
   border: 2px solid #ff2d55;
 }
 
-input.ng-touched.ng-valid,
-textarea.ng-touched.ng-valid {
+.form-field input.ng-touched.ng-valid,
+.form-field textarea.ng-touched.ng-valid {
   border: 2px solid #7ed321;
 }
 
@@ -141,44 +175,50 @@ textarea.ng-touched.ng-valid {
   label {
     position: relative;
     display: block;
-    cursor: pointer;
+    padding-left: 36px;
     color: $color-black;
     font-family: $font-montserrat;
     font-size: 16px;
     line-height: 1.4;
-    padding-left: 36px;
+    cursor: pointer;
   }
 
   label::before {
     content: '';
     position: absolute;
-    left: 0;
     top: 2px;
+    left: 0;
+
     width: 20px;
     height: 20px;
     border: 2px solid $color-primary;
     border-radius: 6px;
+    box-sizing: border-box;
     background: transparent;
-    transition: 0.2s ease;
+
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      transform 200ms ease;
   }
 
   input:checked + label::before {
-    background: $color-primary;
     border-color: $color-primary;
+    background-color: $color-primary;
+    transform: scale(1.05);
   }
 
   input:checked + label::after {
     content: '✔';
     position: absolute;
-    left: 3px;
-    right: 3px;
-    top: 3px;
-    font-size: 12px;
+    top: 0;
+    left: 4px;
+
     color: $color-white;
-    width: 18px;
-    height: 18px;
-    font-weight: bold;
     font-family: $font-baloo;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
   }
 
   a {
@@ -190,5 +230,64 @@ textarea.ng-touched.ng-valid {
       border-bottom: 2px solid $color-primary;
       font-weight: 600;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-inner {
+    padding: 0 32px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-right {
+    padding-top: 0;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 0 56px;
+  }
+
+  .contact-inner {
+    padding: 0 18px;
+  }
+
+  .contact-form {
+    gap: 42px;
+
+    input {
+      height: 64px;
+    }
+
+    textarea {
+      min-height: 180px;
+    }
+  }
+
+  .status-icon {
+    top: 32px;
+  }
+
+  .textarea-icon {
+    top: 20px;
+  }
+
+  .error-text {
+    font-size: 13px;
   }
 }

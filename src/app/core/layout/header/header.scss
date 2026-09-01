@@ -28,6 +28,7 @@ $gradient-light-blue: linear-gradient(
 @media (max-width: 1440px) {
   .nav {
     justify-content: space-around;
+    background: transparent;
   }
 }
 
@@ -48,8 +49,12 @@ $gradient-light-blue: linear-gradient(
 }
 
 .nav__logo {
-  height: 55px;
+  height: 60px;
   object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #262e34;
+  transition: transform 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav__list {

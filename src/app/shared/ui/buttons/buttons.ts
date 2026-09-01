@@ -18,6 +18,6 @@ export class Buttons {
   @Input() disabled: boolean = false;
   @Input() height: string = '58px';
   @Input() background: string = '#ffffff';
-  @Input() border: string = '2px solid #5988FF';
+  /*  @Input() border: string = '2px solid #5988FF'; */
   @Input() border_radius: string = '10px';
 }

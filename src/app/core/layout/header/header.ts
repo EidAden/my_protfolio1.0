@@ -46,7 +46,7 @@ export class Header {
 
   get logoSrc(): string {
     return this.isImprintPage() || this.isLargeScreen
-      ? 'images/header/logo_blue.png'
-      : 'images/header/logo.png';
+      ? 'images/header/logo_white.jpg'
+      : 'images/header/logo_white.jpg';
   }
 }

@@ -27,12 +27,11 @@ body {
 
 .main_content_section {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   min-height: 100vh;
   position: relative;
   color: $color_secondary;
   background-color: $bc_color-white;
+  overflow: hidden;
 }
 
 .header {
@@ -64,6 +63,58 @@ body {
   .ellips_5 {
     position: absolute;
     top: -90px;
+  }
+}
+
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.projects-wrapper app-projects {
+  position: relative;
+  z-index: 2;
+}
+
+.blob--pollo-right {
+  position: absolute;
+
+  top: 400px;
+  right: -120px;
+
+  width: 480px;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #5988ff 0%, #0047ff 100%);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .blob--pollo-right {
+    top: 35%;
+    right: -100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .blob--pollo-right {
+    top: 22%;
+    right: -80px;
+
+    width: clamp(200px, 45vw, 320px);
+  }
+}
+
+@media (max-width: 600px) {
+  .blob--pollo-right {
+    top: 18%;
+    right: -90px;
+
+    width: 230px;
   }
 }
 

@@ -1,27 +1,36 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 
+type Language = 'en' | 'de';
+
 @Injectable({
   providedIn: 'root',
 })
 export class UiService {
-  private translocoService = inject(TranslocoService);
+  private readonly translocoService = inject(TranslocoService);
+  private readonly languageStorageKey = 'portfolio-language';
+  private readonly defaultLanguage: Language = 'en';
 
   isMenuOpen = signal(false);
+  currentLanguage = signal<Language>(this.defaultLanguage);
 
-  openMenu() {
+  constructor() {
+    this.loadSavedLanguage();
+  }
+
+  openMenu(): void {
     this.setMenuState(true);
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.setMenuState(false);
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.setMenuState(!this.isMenuOpen());
   }
 
-  private setMenuState(open: boolean) {
+  private setMenuState(open: boolean): void {
     this.isMenuOpen.set(open);
 
     if (open) {
@@ -31,16 +40,29 @@ export class UiService {
     }
   }
 
-  changeLang(lang: 'en' | 'de') {
+  changeLang(lang: Language): void {
     this.translocoService.setActiveLang(lang);
+    this.currentLanguage.set(lang);
+
+    localStorage.setItem(this.languageStorageKey, lang);
   }
 
-  changeLangAndCloseMenu(lang: 'en' | 'de') {
+  changeLangAndCloseMenu(lang: Language): void {
     this.changeLang(lang);
     this.closeMenu();
   }
 
-  get activeLang() {
-    return this.translocoService.getActiveLang();
+  private loadSavedLanguage(): void {
+    const savedLanguage = localStorage.getItem(this.languageStorageKey);
+
+    const language: Language =
+      savedLanguage === 'de' || savedLanguage === 'en' ? savedLanguage : this.defaultLanguage;
+
+    this.translocoService.setActiveLang(language);
+    this.currentLanguage.set(language);
+  }
+
+  get activeLang(): Language {
+    return this.currentLanguage();
   }
 }

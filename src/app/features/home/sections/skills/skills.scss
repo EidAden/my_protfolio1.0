@@ -8,13 +8,24 @@ $color_secondary: #ffffff;
   background: linear-gradient(128.94deg, #5988ff -33.96%, #5988ff 36.71%, #0043f0 112.25%);
 }
 
+.inner_content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
 .skills__title {
-  margin: 0 0 28px 0;
+  margin: 0;
   text-align: center;
   font-family: $font-Bahloo;
   font-weight: 800;
   font-size: clamp(36px, 7vw, 96px);
   line-height: 1.1;
+
+  padding: 56px 0 80px 0;
 }
 
 .skills__grid {
@@ -85,7 +96,7 @@ $color_secondary: #ffffff;
 
   .skills__grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 40px 30px;
+    gap: 140px 30px;
   }
 
   .skill img {
