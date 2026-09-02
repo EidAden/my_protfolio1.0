@@ -1,59 +1,133 @@
-# MyPort
+# Eid Aden — Frontend Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+This repository contains my personal frontend developer portfolio, built with Angular and TypeScript.
 
-## Development server
+The portfolio presents my projects, technical skills, professional background, and contact information. It was developed with a strong focus on responsive design, maintainable code, accessibility, and user experience.
 
-To start a local development server, run:
+## Live Demo
+
+Visit the portfolio:
+
+https://eidaden.com
+
+## Features
+
+* Responsive design for desktop, tablet, and mobile devices
+* Multilingual interface in English and German
+* Persistent language selection using `localStorage`
+* Reactive contact form with validation
+* Reusable Angular components
+* Project showcase with live-demo and GitHub links
+* Smooth navigation between portfolio sections
+* Dedicated privacy policy and legal notice pages
+* Custom SCSS styling and responsive layouts
+
+## Technologies
+
+* Angular 20
+* TypeScript
+* HTML5
+* SCSS
+* Angular Reactive Forms
+* Transloco
+* REST API integration
+* Git and GitHub
+* Responsive Web Design
+
+## Featured Projects
+
+### Join
+
+A task-management application inspired by the Kanban system. Users can create, organize, edit, and assign tasks.
+
+**Technologies:** Angular, TypeScript, SCSS and Firebase
+
+### El Pollo Loco
+
+A browser-based 2D game developed with object-oriented JavaScript.
+
+**Technologies:** JavaScript, HTML5, CSS and Canvas
+
+### Pokédex
+
+A responsive Pokédex application that retrieves and displays Pokémon information from the PokéAPI.
+
+**Technologies:** JavaScript, HTML, CSS and REST API
+
+## Getting Started
+
+### Prerequisites
+
+Make sure the following tools are installed:
+
+* [Node.js](https://nodejs.org/)
+* [Angular CLI](https://angular.dev/tools/cli)
+* [Git](https://git-scm.com/)
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/EidAden/my_protfolio1.0.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd my_protfolio1.0
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open the application in your browser:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application automatically reloads when source files are modified.
 
-```bash
-ng generate --help
-```
+## Production Build
 
-## Building
-
-To build the project run:
+Create an optimized production build:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The generated files will be stored in the `dist/` directory.
 
-## Running unit tests
+## Project Goals
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+The main goals of this project were to:
 
-```bash
-ng test
-```
+* Build a professional and responsive developer portfolio
+* Apply Angular best practices
+* Create reusable and maintainable components
+* Implement form validation and multilingual functionality
+* Demonstrate my frontend development skills through real projects
 
-## Running end-to-end tests
+## Author
 
-For end-to-end (e2e) testing, run:
+**Eid Aden**
+Junior Frontend Developer specializing in Angular and TypeScript.
 
-```bash
-ng e2e
-```
+* Portfolio: [eidaden.com](https://eidaden.com)
+* GitHub: [github.com/EidAden](https://github.com/EidAden)
+* LinkedIn: [Eid Aden](https://www.linkedin.com/in/eid-aden-369b50147/)
+* Email: [eiddev24@gmail.com](mailto:eiddev24@gmail.com)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## License
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project was created for educational and portfolio purposes.
